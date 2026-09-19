@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Website resmi Pesantren OASE AL QURAN. Informasi Profil, kegiatan, Data santri, Dan pendaftaran">
+    <title>Beranda - Pondok Pesantren Oase</title>
+
+    <!-- icon tab -->
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_tab.png">
+
+    <!-- Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Menyambung ke CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+    <!-- =========================================== -->
+    <!-- =============== [ NAVBAR ] ================ -->
+    <!-- =========================================== -->
+    <nav class="oase-navbar">
+        <div>
+            <!-- LOGO -->
+            <div class="logo-oase">
+                <img src="assets/images/logo/logo.png" alt="logo pondok">
+                
+            </div>
+            <!-- NAVIGASI -->
+            <div class="navigasi">
+                <div class="media">
+                    <div class="social_media">
+                        <ul>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="#"><i class='bx bxl-youtube'></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEARCH -->
+                    <div class="search">
+                        <button type="button" class="search_icon" id="searchOpen">
+                            <i class='bx bx-search'></i>
+                        </button>
+
+                        <div class="search_box" id="searchBox">
+                            <input 
+                                type="text"
+                                id="searchInput"
+                                placeholder="Cari informasi..."
+                                autocomplete="off"
+                            >
+
+                            <button type="button" id="searchClear" class="search_clear">
+                                <i class='bx bx-x'></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar_nav">
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li class="dropdown-info">
+                            <a href="#" id="infoTogle">Informasi <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_info">
+                                <li><a href="#">Profil Pondok</a></li>
+                                <li><a href="#">Sejarah</a></li>
+                                <li><a href="#">Visi & Misi</a></li>
+                                <li><a href="#">Program Pondok</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Data Santri</a></li>
+                        <li class="dropdown-berita">
+                            <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_berita">
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Kegiatan</a></li>
+                                <li><a href="#">Pengunguman</a></li>
+                                <li><a href="#">Dokumentasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- =========================================== -->
+    <!-- =============[ LANDING PAGE ]============== -->
+    <!-- =========================================== -->
+    <main>
+        <!-- BERITA TERKINI -->
+        <section class="berita_section">
+            
+        </section>
+    </main>
+
+<!-- Menyanbung ke JS -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

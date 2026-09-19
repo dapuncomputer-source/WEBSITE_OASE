@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --biru-utama: #0B4F8A;
+    --biru-tua: #063B6B;
+    --biru-muda: #EAF4FF;
+    --toska: #18A7A0;
+    --putih: #FFFFFF;
+    --gelap: #1F2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+
+/* ================================================ */
+/* ===============[  STYLE NAVBAR  ]=============== */
+/* ================================================ */
+.oase-navbar {
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 0 11.5rem;
+    border: 1px solid #000;
+    z-index: 9999999;
+}
+
+.oase-navbar > div {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    border: 1px solid #000;
+}
+
+.logo-oase {
+    width: 220px;
+    /* height: 100%; */
+    flex-shrink: 0;
+    /* border: 1px solid #000; */
+}
+
+.logo-oase img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* object-fit: contain; */
+}
+
+/* ===== [-NAVIGASI-] ===== */
+.navigasi {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Media */
+.media{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 40px;
+}
+
+.social_media ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 5px;
+}
+
+.social_media ul li {
+    margin: 0;
+}
+
+.media_icon {
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* =[- SEARCH -]= */
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.search_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    color: #000;
+    transition: 0.3s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.search_icon:hover {
+    color: var(--biru-utama);
+}
+
+/* KOTAK PENCARIAN */
+.search_box {
+    position: absolute;
+    top: calc(100% + 45px);
+    right: 0;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+    background-color: var(--putih);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    z-index: 2000;
+}
+
+/* Search box aktif */
+.search_box.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+/* Textbox */
+.search_box input {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    color: var(--gelap);
+}
+
+.search_box input::placeholder {
+    color: #9ca3af;
+}
+
+/* Tombol X dan search */
+.search_clear {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search_clear {
+    color: #777;
+}
+
+.search_clear:hover {
+    color: #e11d48;
+}
+
+.search_submit {
+    color: var(--biru-utama);
+}
+
+.search_submit:hover {
+    color: var(--biru-tua);
+}
+
+
+/* Navbar Navigasi */
+.navbar_nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_nav > ul > li {
+    position: relative;
+    margin: 0 1.5rem;
+    font-weight: 600;
+}
+
+.navbar_nav > ul > li > a {
+    color: #000;
+}
+
+/* ==========[ -STYLE DROPDOWN- ]========== */
+/* Panah dropdown */
+.navbar_nav > ul > li > a i {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 3px;
+    vertical-align: middle;
+    color: #000;
+}
+
+/* DROPDOWN */
+.dropdown-info,
+.dropdown-berita {
+    position: relative;
+}
+
+/* Dropdown disembunyikan */
+.navbar_nav .nav_info,
+.navbar_nav .nav_berita {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+/* Tampilkan dropdown ketika mouse diarahkan ke menu */
+.dropdown-info:hover > .nav_info,
+.dropdown-berita:hover > .nav_berita {
+    display: block;
+}
+
+/* Item di dalam dropdown */
+.navbar_nav .nav_info li,
+.navbar_nav .nav_berita li {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    font-weight: 400;
+}
+
+/* Link di dalam dropdown */
+.navbar_nav .nav_info li a,
+.navbar_nav .nav_berita li a {
+    display: block;
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 15px;
+    color: var(--gelap);
+    white-space: nowrap;
+}
+
+/* Efek ketika mouse masuk */
+.navbar_nav .nav_info li a:hover,
+.navbar_nav .nav_berita li a:hover {
+    background-color: var(--biru-muda);
+    color: var(--biru-utama);
+}
+
+
+/* ============[ HAMBURGER ]============= */
+.hamburger {
+    display: none;
+    width: 35px;
+    height: 35px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 5px;
+    transition: 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -moz-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -moz-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    -o-transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================================================ */
+/* ===============[STYLE NAVBAR END]=============== */
+/* ================================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================== */
+/* ==================[ MEDIA QUERY ]================== */
+/* =================================================== */
+
+/* ================[ LAPTOP ]================ */
+/* ========================================== */
+@media (max-width: 1366px) {
+    .oase-navbar {
+        padding: 0 4rem;
+    }
+}
+
+
+
+/* ================[ TABLET ]================ */
+/* ========================================== */
+@media (max-width: 992px) {
+    .oase-navbar {
+        padding: 0 2rem;
+    }
+
+    .logo-oase {
+        width: 210px;
+    }
+
+    .navbar_nav > ul > li {
+        margin: 0 0.7rem;
+    }
+
+    .media_icon {
+        font-size: 24px;
+    }
+
+    .search {
+        margin-left: 1rem;
+    }
+
+    /* Matikan sistem hover desktop */
+    .dropdown-info:hover > .nav_info,
+    .dropdown-berita:hover > .nav_berita {
+        display: none;
+    }
+
+    /* Tetapi kalau dibuka melalui JS, tetap tampil */
+    .dropdown-info.info-open:hover > .nav_info {
+        display: block;
+    }
+
+    .dropdown-berita.berita-open:hover > .nav_berita {
+        display: block;
+    }
+
+    .dropdown-info,
+    .dropdown-berita {
+        position: static;
+    }
+
+    /* DROPDOWN TABLET */
+    .navbar_nav .nav_info,
+    .navbar_nav .nav_berita {
+        display: none;
+        position: absolute;
+        width: 100%;
+        /* min-width: 0; */
+        padding: 0;
+        background-color: #ffffff;
+        border: none;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    /* Dropdown aktif */
+    .dropdown-info.info-open > .nav_info,
+    .dropdown-berita.berita-open > .nav_berita {
+
+        display: block ;
+    }
+
+    /* Item dropdown */
+    .navbar_nav .nav_info li,
+    .navbar_nav .nav_berita li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Link dropdown */
+    .navbar_nav .nav_info li a,
+    .navbar_nav .nav_berita li a {
+        display: block;
+        width: 100%;
+        padding: 12px 35px;
+        font-size: 14px;
+        color: var(--gelap);
+        white-space: nowrap;
+    }
+
+    /* Hover dropdown */
+    .navbar_nav .nav_info li a:hover,
+    .navbar_nav .nav_berita li a:hover {
+        background-color: var(--biru-muda);
+        color: var(--biru-utama);
+    }
+
+    .info-open > a i,
+    .berita-open > a i {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+
+    
+    .navbar_nav > ul > li > a i {
+       transition: transform 0.3s ease;
+       -webkit-transition: transform 0.3s ease;
+       -moz-transition: transform 0.3s ease;
+       -ms-transition: transform 0.3s ease;
+       -o-transition: transform 0.3s ease;
+    }
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+/* ================[ --HP-- ]================ */
+/* ========================================== */
+@media (max-width: 768px) {
+    .navigasi {
+        display: flex;
+    }
+
+    .oase-navbar {
+        padding: 0 15px;
+    }
+
+    .oase-navbar > div {
+        min-height: 70px;
+    }
+
+    .logo-oase {
+        width: 200px;
+    }
+
+    /* Navigasi disembunyikan */
+    .navbar_nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        background-color: var(--putih);
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        z-index: 999;
+    }
+
+    /* Navigasi muncul */
+    .navigasi.active .navbar_nav{
+        display: block;
+    }
+
+    /* Social medi sementara berada di menu */
+    .social_media {
+        display: none;
+    }
+    
+
+    /* Navbar menjadi vertikal */
+    .navbar_nav > ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar_nav > ul > li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar_nav > ul > li > a {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 18px;
+    }
+
+    /* DROPDOWN TABLET */
+    .navbar_nav .nav_info,
+    .navbar_nav .nav_berita {
+        position: static;
+    }
+
+    /* SEARCH TETAP ADA */
+    .search {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .search_box {
+        top: calc(100% + 25px);
+        right: 0;
+    }
+
+    /* HAMBURGER MUNCUL */
+    .hamburger {
+        display: flex;
+        margin-left: 15px;
+        justify-content: center;
+    }
+}
+
+
