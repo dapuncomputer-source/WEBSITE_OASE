@@ -1458,10 +1458,8 @@ body {
 
 .oase-footer {
     width: 100%;
-
     background-color: var(--biru-tua);
     color: var(--putih);
-
     margin-top: 60px;
 }
 
@@ -1473,12 +1471,9 @@ body {
 .footer_container {
     width: 100%;
     max-width: var(--container-width);
-
     margin: 0 auto;
     padding: 55px var(--container-padding);
-
     display: grid;
-
     grid-template-columns:
         1.5fr
         1fr
@@ -1505,9 +1500,7 @@ body {
     width: 140px;
     max-width: 100%;
     height: auto;
-
     display: block;
-
     margin-bottom: 18px;
 }
 
@@ -1516,9 +1509,7 @@ body {
 
 .footer_brand p {
     margin: 0;
-
     color: rgba(255, 255, 255, 0.75);
-
     font-size: 14px;
     line-height: 1.7;
 }
@@ -1530,11 +1521,8 @@ body {
 
 .footer_social {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     margin-top: 22px;
 }
 
@@ -1542,34 +1530,26 @@ body {
 .footer_social a {
     width: 38px;
     height: 38px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border: 1px solid rgba(255, 255, 255, 0.35);
-
     border-radius: 50%;
-
     color: var(--putih);
-
     font-size: 19px;
-
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+    transition:        background-color 0.3s ease,        
+    color 0.3s ease,        transform 0.3s ease;
+    -webkit-transition:        background-color 0.3s ease,        color 0.3s ease,        transform 0.3s ease;
+    -moz-transition:        background-color 0.3s ease,        color 0.3s ease,        transform 0.3s ease;
+    -ms-transition:        background-color 0.3s ease,        color 0.3s ease,        transform 0.3s ease;
+    -o-transition:        background-color 0.3s ease,        color 0.3s ease,        transform 0.3s ease;
 }
 
 
 .footer_social a:hover {
     background-color: var(--toska);
-
     border-color: var(--toska);
-
     color: var(--putih);
-
     transform: translateY(-3px);
 }
 
@@ -1581,13 +1561,9 @@ body {
 .footer_contact h3,
 .footer_navigation h3 {
     position: relative;
-
     margin: 0 0 22px;
-
     padding-bottom: 10px;
-
     font-size: 17px;
-
     font-weight: 600;
 }
 
@@ -1596,17 +1572,12 @@ body {
 
 .footer_contact h3::after,
 .footer_navigation h3::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: 0;
-
     width: 35px;
     height: 2px;
-
     background-color: var(--toska);
 }
 
@@ -1617,29 +1588,19 @@ body {
 
 .footer_contact {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
 }
 
 
 .footer_contact a {
-
     display: flex;
-
     align-items: flex-start;
-
     gap: 10px;
-
     margin-bottom: 15px;
-
     color: rgba(255, 255, 255, 0.78);
-
     font-size: 13px;
-
     line-height: 1.6;
-
     transition: color 0.3s ease;
 }
 
@@ -1650,13 +1611,9 @@ body {
 
 
 .footer_contact i {
-
     flex-shrink: 0;
-
     margin-top: 2px;
-
     color: var(--toska);
-
     font-size: 19px;
 }
 
@@ -1666,23 +1623,16 @@ body {
 /* ================================================= */
 
 .footer_navigation {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
 }
 
 
 .footer_navigation a {
-
     margin-bottom: 10px;
-
     color: rgba(255, 255, 255, 0.78);
-
     font-size: 13px;
-
     transition:
         color 0.3s ease,
         padding-left 0.3s ease;
@@ -1690,9 +1640,7 @@ body {
 
 
 .footer_navigation a:hover {
-
     color: var(--toska);
-
     padding-left: 5px;
 }
 
@@ -1702,9 +1650,7 @@ body {
 /* ================================================= */
 
 .footer_bottom {
-
     width: 100%;
-
     border-top:
         1px solid
         rgba(255, 255, 255, 0.12);
@@ -1712,13 +1658,9 @@ body {
 
 
 .footer_bottom p {
-
     width: 100%;
-
     max-width: var(--container-width);
-
     margin: 0 auto;
-
     padding:
         20px
         var(--container-padding);
@@ -1727,10 +1669,8 @@ body {
         rgba(255, 255, 255, 0.55);
 
     font-size: 12px;
-
     text-align: center;
 }
-
 
 
 
@@ -1779,11 +1719,8 @@ body {
     /* Brand mengambil 1 baris penuh */
 
     .footer_brand {
-
         grid-column: 1 / -1;
-
         align-items: center;
-
         text-align: center;
     }
 
@@ -1813,13 +1750,10 @@ body {
 @media (max-width: 768px) {
 
     .footer_container {
-
         padding:
             40px
             20px;
-
         grid-template-columns: 1fr;
-
         gap: 35px;
     }
 
@@ -1829,9 +1763,7 @@ body {
     .footer_brand,
     .footer_contact,
     .footer_navigation {
-
         grid-column: auto;
-
         width: 100%;
     }
 
@@ -1839,23 +1771,18 @@ body {
     /* BRAND */
 
     .footer_brand {
-
         align-items: center;
-
         text-align: center;
     }
 
 
     .footer_brand img {
-
         width: 210px;
-
         margin-bottom: 15px;
     }
 
 
     .footer_brand p {
-
         font-size: 13px;
     }
 
@@ -1863,18 +1790,14 @@ body {
     /* SOCIAL */
 
     .footer_social {
-
         margin-top: 18px;
-
         gap: 12px;
     }
 
 
     .footer_social a {
-
         width: 36px;
         height: 36px;
-
         font-size: 18px;
     }
 
@@ -1882,22 +1805,18 @@ body {
     /* KONTAK */
 
     .footer_contact {
-
         align-items: flex-start;
     }
 
 
     .footer_contact h3,
     .footer_navigation h3 {
-
         font-size: 16px;
-
         margin-bottom: 18px;
     }
 
 
     .footer_contact a {
-
         font-size: 12px;
     }
 
@@ -1905,7 +1824,6 @@ body {
     /* NAVIGASI */
 
     .footer_navigation a {
-
         font-size: 12px;
     }
 
@@ -1913,7 +1831,6 @@ body {
     /* COPYRIGHT */
 
     .footer_bottom p {
-
         padding:
             17px
             15px;
@@ -1931,7 +1848,6 @@ body {
 @media (max-width: 480px) {
 
     .footer_container {
-
         padding:
             35px
             15px;
@@ -1941,26 +1857,871 @@ body {
 
 
     .footer_brand img {
-
         width: 190px;
     }
 
 
     .footer_brand p {
-
         font-size: 12px;
     }
 
 
     .footer_contact a {
-
         font-size: 11px;
     }
 
 
     .footer_navigation a {
-
         font-size: 11px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================= */
+        /* ================================================= */
+        /* ================== { TENTANG } ================== */
+        /* ================================================= */
+/* ================================================================= */
+
+
+/*TENTANG PONDOK*/
+.tentang_hero {
+    width: 100%;
+}
+
+.tentang_slider {
+    position: relative;
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+}
+
+/* SLIDE */
+.tentang_slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+/* SLIDE AKTIF */
+.tentang_slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* GAMBAR */
+.tentang_slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* LAPISAN GELAP */
+.tentang_slider::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* TEKS */
+.tentang_overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.tentang_overlay h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================================================ */
+/* TENTANG PONDOK - RESPONSIVE */
+/* ================================================ */
+/* ==================={ LAPTOP }=================== */
+@media (max-width: 1366px) {
+    
+    .tentang_slider {
+        height: 480px;
+    }
+
+    .tentang_overlay h1 {
+        font-size: 44px;
+    }
+
+}
+
+
+/* ==================={ TABLET }=================== */
+@media (max-width: 992px) {
+    
+    .tentang_slider {
+        height: 400px;
+    }
+    
+    .tentang_overlay h1 {
+        font-size: 38px;
+    }
+    
+}
+
+
+/* ==================={ MOBILE }=================== */
+@media (max-width: 768px) {
+    
+    .tentang_slider {
+        height: 330px;
+    }
+    
+    .tentang_overlay h1 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* ==================={ PHONE }=================== */
+@media (max-width: 480px) {
+
+    .tentang_slider {
+        height: 250px;
+    }
+
+    .tentang_overlay h1 {
+        font-size: 26px;
+    }
+
+}
+
+
+
+
+/* ================================================ */
+/* ========== PENGANTAR TENTANG PONDOK =========== */
+/* ================================================ */
+
+.tentang_pengantar {
+    width: 100%;
+    /* padding: 70px 20px; */
+    background-color: var(--putih);
+}
+
+.tentang_pengantar_container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 55px var(--container-padding);
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.tentang_pengantar_container p {
+    margin: 0 auto 18px;
+
+    max-width: 1100px;
+
+    color: var(--gelap);
+
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* TOMBOL */
+.tentang_selengkapnya {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 10px 22px;
+
+    border: 1px solid var(--biru-utama);
+    border-radius: 5px;
+
+    color: var(--biru-utama);
+    background-color: transparent;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.tentang_selengkapnya:hover {
+    background-color: var(--biru-utama);
+    color: var(--putih);
+}
+
+
+/* ==================={ TABLET }=================== */
+@media (max-width: 992px) {
+    
+    .tentang_pengantar {
+        padding: 55px 20px;
+    }
+
+    .tentang_pengantar_container p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==================={ MOBILE }=================== */
+@media (max-width: 768px) {
+    
+    .tentang_pengantar {
+        padding: 45px 15px;
+    }
+
+    .tentang_pengantar_container p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .tentang_selengkapnya {
+        margin-top: 15px;
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==================={ PHONE }=================== */
+@media (max-width: 480px) {
+
+    .tentang_pengantar {
+        padding: 40px 15px;
+    }
+
+    .tentang_pengantar_container p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+
+
+
+
+
+
+/* ========================================= */
+/* ============ VIDEO PROFIL =============== */
+/* ========================================= */
+
+.video_section {
+    width: 100%;
+    background-color: var(--putih);
+}
+
+.video_container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* HEADER */
+.video_container .section_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 35px;
+    border-bottom: 2px solid var(--gelap);
+}
+
+.video_container .section_header span {
+    position: relative;
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.video_profile {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 8px;
+    border: 3px solid var(--biru-utama);
+    background-color: #ffffff;
+    border-radius: 2rem;
+}
+
+.video_profile iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    border: none;
+    border-radius: 2rem;
+}
+
+
+/* ==================={ TABLET }=================== */
+@media (max-width: 992px) {
+
+    .video_profile iframe {
+        aspect-ratio: 16 / 8;
+    }
+
+}
+
+/* ==================={ MOBILE }=================== */
+@media (max-width: 768px) {
+
+    .video_container {
+        padding: 0 15px;
+    }
+
+    .video_container .section_header {
+        margin-bottom: 25px;
+    }
+
+    .video_container .section_header span {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+
+    .video_profile {
+        width: 100%;
+        padding: 5px;
+        border-width: 2px;
+    }
+
+    .video_profile iframe {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+
+
+
+/* ========================================= */
+/* =============== PIMPINAN ================ */
+/* ========================================= */
+
+.pimpinan_section {
+    width: 100%;
+    padding: 70px 0;
+    background-color: var(--putih);
+}
+
+.pimpinan_container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    border: 1px solid #000;
+}
+
+/* HEADER */
+.pimpinan_header {
+    margin-bottom: 40px;
+}
+
+.pimpinan_header h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 12px;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--gelap);
+}
+
+.pimpinan_header h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--biru-utama);
+}
+
+
+/* CONTENT */
+.pimpinan_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* FOTO */
+.pimpinan_image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.pimpinan_image img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* TEXT */
+.pimpinan_info {
+    order: 1;
+    max-width: 600px;
+}
+
+.pimpinan_jabatan {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gelap);
+}
+
+.pimpinan_info h3 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--gelap);
+}
+
+.pimpinan_info p {
+    margin: 0 0 25px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* BUTTON */
+.pimpinan_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+    border: 1px solid var(--biru-utama);
+    border-radius: 6px;
+    color: var(--biru-utama);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.pimpinan_button:hover {
+    background-color: var(--biru-utama);
+    color: var(--putih);
+}
+
+
+/* LIST */
+.pimpinan_list {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.pimpinan_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd;
+    color: var(--gelap);
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.pimpinan_item:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.pimpinan_item i {
+    font-size: 20px;
+    color: var(--biru-utama);
+    transition: 0.3s ease;
+}
+
+.pimpinan_item:hover {
+    color: var(--biru-utama);
+}
+
+.pimpinan_item:hover i {
+    transform: translateX(4px);
+}
+
+
+
+/* ==================={ TABLET }=================== */
+@media (max-width: 992px) {
+
+    .pimpinan_container {
+        padding: 0 2rem;
+    }
+
+    .pimpinan_content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .pimpinan_image {
+        order: 1;
+    }
+
+    .pimpinan_image img {
+        max-width: 450px;
+    }
+
+    .pimpinan_info {
+        order: 2;
+        max-width: 100%;
+    }
+
+}
+
+
+/* ==================={ MOBILE }=================== */
+@media (max-width: 768px) {
+
+    .pimpinan_section {
+        padding: 50px 0;
+    }
+
+    .pimpinan_container {
+        padding: 0 15px;
+    }
+
+    .pimpinan_header {
+        margin-bottom: 30px;
+    }
+
+    .pimpinan_header h2 {
+        font-size: 27px;
+        padding-bottom: 10px;
+    }
+
+    .pimpinan_header h2::after {
+        width: 42px;
+        height: 4px;
+    }
+
+    .pimpinan_content {
+        gap: 25px;
+    }
+
+    .pimpinan_image img {
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .pimpinan_jabatan {
+        font-size: 16px;
+    }
+
+    .pimpinan_info h3 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .pimpinan_info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .pimpinan_button {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .pimpinan_item {
+        font-size: 14px;
+        padding: 13px 0;
+    }
+
+}
+
+
+
+
+
+
+/* ================================================ */
+/* ========= KUNJUNGAN & SILATURAHMI ============== */
+/* ================================================ */
+
+.kunjungan_section {
+    width: 100%;
+    padding: 60px 0;
+}
+
+.kunjungan_container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+
+/* ================================================ */
+/* HEADER */
+/* ================================================ */
+.section_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--gelap);
+}
+
+.section_header h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 8px 14px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+
+/* ================================================ */
+/* DAFTAR KUNJUNGAN */
+/* ================================================ */
+
+.kunjungan_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* ================================================ */
+/* CARD */
+/* ================================================ */
+
+.kunjungan_card {
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.kunjungan_card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================================================ */
+/* FOTO */
+/* ================================================ */
+
+.kunjungan_image {
+    display: block;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.kunjungan_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.kunjungan_card:hover .kunjungan_image img {
+    transform: scale(1.05);
+}
+
+
+/* ================================================ */
+/* ISI CARD */
+/* ================================================ */
+
+.kunjungan_content {
+    padding: 25px;
+}
+
+.kunjungan_content h3 {
+    margin: 0 0 12px;
+    color: var(--gelap);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.kunjungan_content p {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================================================ */
+/* SELENGKAPNYA */
+/* ================================================ */
+
+.kunjungan_link {
+    display: inline-block;
+    padding: 9px 16px;
+    color: var(--gelap);
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.kunjungan_link:hover {
+    color: #fff;
+    background-color: var(--biru-utama);
+    border-color: var(--biru-utama);
+}
+
+
+
+/* ================================================ */
+/* ======== TOMBOL SEMUA KUNJUNGAN ================ */
+/* ================================================ */
+
+.kunjungan_more {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 35px;
+}
+
+.kunjungan_more a {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    color: var(--biru-utama);
+    background-color: #fff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border: 1px solid var(--biru-utama);
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.kunjungan_more a:hover {
+    color: #fff;
+    background-color: var(--biru-utama);
+}
+
+
+
+/* ================================================ */
+/* TABLET */
+/* ================================================ */
+
+@media (max-width: 992px) {
+
+    .kunjungan_container {
+        padding: 0 2rem;
+    }
+
+    .kunjungan_list {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+}
+
+
+/* ================================================ */
+/* HP */
+/* ================================================ */
+
+@media (max-width: 768px) {
+
+    .kunjungan_section {
+        padding: 45px 0;
+    }
+
+    .kunjungan_container {
+        padding: 0 15px;
+    }
+
+    .section_header {
+        margin-bottom: 30px;
+    }
+
+    .section_header h2 {
+        padding: 7px 12px;
+
+        font-size: 13px;
+    }
+
+    .kunjungan_list {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .kunjungan_image {
+        height: 200px;
+    }
+
+    .kunjungan_content {
+        padding: 20px;
     }
 
 }

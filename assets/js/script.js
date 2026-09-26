@@ -96,3 +96,40 @@ document.addEventListener("click", function (event) {
     }
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// ===================================================================
+        // ================================================
+        // =========={SLIDESHOW TENTANG PONDOK}============
+        // ================================================
+// ===================================================================
+
+const tentangSlides = document.querySelectorAll(".tentang_slide");
+
+let tentangIndex = 0;
+
+function nextTentangSlide() {
+
+    tentangSlides[tentangIndex].classList.remove("active");
+
+    tentangIndex++;
+
+    if (tentangIndex >= tentangSlides.length) {
+        tentangIndex = 0;
+    }
+
+    tentangSlides[tentangIndex].classList.add("active");
+}
+
+if (tentangSlides.length > 1) {
+    setInterval(nextTentangSlide, 5000);
+}
