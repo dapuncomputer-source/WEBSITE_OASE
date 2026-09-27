@@ -1,0 +1,234 @@
+/* =========================================
+   TENTANG OASE
+========================================= */
+
+.tentang-layout {
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.tentang-sidebar {
+    background-color: var(--biru-tua);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tentang-sidebar-header {
+    padding: 25px 25px 15px;
+}
+
+.tentang-sidebar-header h2 {
+    margin: 0;
+    color: var(--putih);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* MENU */
+
+.tentang-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px 15px;
+}
+
+.tentang-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 10px;
+    color: var(--putih);
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    transition: 0.25s ease;
+}
+
+.tentang-menu a i {
+    font-size: 18px;
+    color: var(--toska);
+}
+
+.tentang-menu a:hover {
+    padding-left: 15px;
+    color: var(--toska);
+}
+
+.tentang-menu a.active {
+    color: var(--toska);
+    font-weight: 600;
+}
+
+
+/* tombol mobile */
+
+.tentang-menu-toggle {
+    display: none;
+}
+
+
+/* =========================================
+   ISI SEJARAH
+========================================= */
+
+.sejarah-content {
+    min-width: 0;
+}
+
+.sejarah-content h1 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--gelap);
+}
+
+.sejarah-underline {
+    width: 50px;
+    height: 4px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    background-color: var(--biru-utama);
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   FOTO SEJARAH
+========================================= */
+
+.sejarah-image {
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.sejarah-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   TEKS
+========================================= */
+
+.sejarah-text {
+    margin-bottom: 30px;
+}
+
+.sejarah-text p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gelap);
+    text-align: justify;
+}
+
+
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .tentang-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        margin: 40px auto;
+        padding: 0 2rem;
+    }
+
+    .tentang-sidebar {
+        width: 100%;
+    }
+
+    .tentang-sidebar-header {
+        padding: 18px 20px;
+    }
+
+    .tentang-sidebar-header h2 {
+        display: none;
+    }
+
+    .tentang-menu-toggle {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 5px 0;
+
+        border: none;
+        background: none;
+
+        color: var(--putih);
+        font-family: inherit;
+        font-size: 17px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .tentang-menu-toggle i {
+        font-size: 24px;
+
+        transition: transform 0.3s ease;
+    }
+
+    .tentang-menu {
+        display: none;
+        padding: 0 15px 15px;
+    }
+
+    .tentang-menu.active {
+        display: flex;
+    }
+
+    .tentang-menu-toggle.active i {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* =========================================
+   HP
+========================================= */
+
+@media (max-width: 768px) {
+
+    .tentang-layout {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .sejarah-content h1 {
+        font-size: 30px;
+    }
+
+    .sejarah-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+    }
+}

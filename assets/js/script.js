@@ -133,3 +133,24 @@ function nextTentangSlide() {
 if (tentangSlides.length > 1) {
     setInterval(nextTentangSlide, 5000);
 }
+
+
+
+
+// ================================================
+// ==========={ NAVBAR TENTANG PONDOK }============
+// ================================================
+const tentangMenuToggle = document.getElementById("tentangMenuToggle");
+const tentangMenu = document.getElementById("tentangMenu");
+
+if (tentangMenuToggle && tentangMenu) {
+
+    tentangMenuToggle.addEventListener("click", function () {
+
+        tentangMenu.classList.toggle("active");
+
+        tentangMenuToggle.classList.toggle("active");
+
+    });
+
+}
