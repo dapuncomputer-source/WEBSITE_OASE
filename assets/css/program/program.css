@@ -1,0 +1,430 @@
+/* ==================================================
+   PROGRAM PONDOK
+================================================== */
+
+.program-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 70px 25px 90px;
+    border: 1px solid #000;
+}
+
+
+/* ==================== HEADER ==================== */
+
+.program-header {
+    max-width: 780px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.program-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--biru-utama);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.program-header h1 {
+    margin: 0 0 15px;
+    color: var(--gelap);
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.program-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==================== SECTION ==================== */
+
+.program-section {
+    margin-bottom: 65px;
+}
+
+.program-section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.program-section-header > div:last-child span {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.program-section-header h2 {
+    margin: 0;
+    color: var(--biru-tua);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* ==================== ICON ==================== */
+
+.program-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--biru-muda);
+    color: var(--biru-utama);
+    border-radius: 12px;
+}
+
+.program-icon i {
+    font-size: 25px;
+}
+
+
+/* ==================== CARD ==================== */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.program-card {
+    padding: 25px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.program-card > i {
+    display: inline-flex;
+    margin-bottom: 18px;
+    color: var(--biru-utama);
+    font-size: 28px;
+}
+
+.program-card h3 {
+    margin: 0 0 8px;
+
+    color: var(--gelap);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.program-card p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cfe3f7;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================== MATERI ==================== */
+
+.program-subsection {
+    margin-top: 35px;
+    padding: 25px;
+
+    background: #f8fbff;
+
+    border: 1px solid #e5edf5;
+    border-radius: 12px;
+}
+
+.program-subsection-title {
+    margin-bottom: 20px;
+}
+
+.program-subsection-title span {
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.program-subsection-title h3 {
+    margin: 5px 0 0;
+
+    color: var(--biru-tua);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.materi-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.materi-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px;
+
+    background: var(--putih);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.materi-item > span {
+    color: var(--biru-utama);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.materi-item h4 {
+    margin: 0 0 3px;
+
+    color: var(--gelap);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.materi-item p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 11px;
+}
+
+
+/* ==================== PLACEHOLDER ==================== */
+
+.program-placeholder {
+    padding: 45px 25px;
+
+    text-align: center;
+
+    background: #f8fbff;
+
+    border: 1px dashed #cbddeb;
+    border-radius: 12px;
+}
+
+.program-placeholder > i {
+    color: var(--biru-utama);
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.program-placeholder h3 {
+    margin: 0 0 7px;
+
+    color: var(--biru-tua);
+    font-size: 18px;
+}
+
+.program-placeholder p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ==================== JADWAL ==================== */
+
+.program-schedule {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--biru-muda);
+
+    border: 1px solid #d5e9fa;
+    border-radius: 12px;
+}
+
+.schedule-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--putih);
+    color: var(--biru-utama);
+
+    border-radius: 50%;
+}
+
+.schedule-icon i {
+    font-size: 26px;
+}
+
+.program-schedule span {
+    display: block;
+    margin-bottom: 3px;
+
+    color: var(--biru-utama);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.program-schedule h2 {
+    margin: 0 0 5px;
+
+    color: var(--biru-tua);
+    font-size: 20px;
+}
+
+.program-schedule p {
+    margin: 0;
+
+    color: var(--gelap);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ==================== TABLET ==================== */
+
+@media (max-width: 992px) {
+
+    .program-page {
+        padding: 55px 20px 70px;
+    }
+
+    .program-header {
+        margin-bottom: 55px;
+    }
+
+    .program-header h1 {
+        font-size: 34px;
+    }
+
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .materi-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 768px) {
+
+    .program-page {
+        padding: 45px 15px 60px;
+    }
+
+    .program-header {
+        margin-bottom: 45px;
+    }
+
+    .program-header h1 {
+        font-size: 30px;
+    }
+
+    .program-header p {
+        font-size: 13px;
+    }
+
+    .program-section {
+        margin-bottom: 50px;
+    }
+
+    .program-section-header h2 {
+        font-size: 21px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        padding: 22px;
+    }
+
+    .program-schedule {
+        align-items: flex-start;
+        padding: 20px;
+    }
+}
+
+
+/* ==================== SMALL MOBILE ==================== */
+
+@media (max-width: 480px) {
+
+    .program-header h1 {
+        font-size: 27px;
+    }
+
+    .program-section-header {
+        gap: 11px;
+    }
+
+    .program-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .program-icon i {
+        font-size: 22px;
+    }
+
+    .program-section-header h2 {
+        font-size: 19px;
+    }
+
+    .program-subsection {
+        padding: 18px;
+    }
+
+    .program-schedule {
+        gap: 13px;
+    }
+
+    .schedule-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .schedule-icon i {
+        font-size: 22px;
+    }
+}
