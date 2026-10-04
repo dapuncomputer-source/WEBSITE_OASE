@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Data Santri | Oase</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Boxicons -->
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- CSS Admin Santri -->
+    <link rel="stylesheet" href="../assets/css/data_santri/santri_admin.css">
+</head>
+
+<body>
+
+    <main class="admin-santri">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <div class="admin-header">
+
+            <div>
+                <span class="admin-label">
+                    Admin
+                </span>
+
+                <h1>
+                    Data Santri
+                </h1>
+
+                <p>
+                    Kelola data santri Pesantren Oase Al-Qur'an.
+                </p>
+            </div>
+
+            <a href="index.html" class="btn-kembali">
+                <i class='bx bx-arrow-back'></i>
+                <span>Halaman Data Santri</span>
+            </a>
+
+        </div>
+
+        <!-- STATISTIK SANTRI -->
+        <div class="admin-statistik">
+        
+            <div class="admin-stat-card">
+                <div class="admin-stat-icon">
+                    <i class='bx bx-group'></i>
+                </div>
+                <div class="admin-stat-info">
+                    <span>Total Santri</span>
+                    <strong id="adminTotalSantri">0</strong>
+                </div>
+            </div>
+        
+            <div class="admin-stat-card">
+                <div class="admin-stat-icon">
+                    <i class='bx bx-male'></i>
+                </div>
+                <div class="admin-stat-info">
+                    <span>Santri Putra</span>
+                    <strong id="adminSantriPutra">0</strong>
+                </div>
+            </div>
+        
+            <div class="admin-stat-card">
+                <div class="admin-stat-icon">
+                    <i class='bx bx-female'></i>
+                </div>
+                <div class="admin-stat-info">
+                    <span>Santri Putri</span>
+                    <strong id="adminSantriPutri">0</strong>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <!-- =========================
+             FORM DATA SANTRI
+        ========================== -->
+        <section class="admin-card">
+
+            <div class="admin-card-header">
+
+                <div>
+                    <h2 id="formTitle">
+                        Tambah Data Santri
+                    </h2>
+
+                    <p>
+                        Masukkan informasi santri pada form berikut.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="santriForm">
+
+                <!-- ID tersembunyi -->
+                <input type="hidden" id="santriId">
+
+
+                <div class="form-grid">
+
+                    <!-- NIS -->
+                    <div class="form-group">
+
+                        <label for="nis">
+                            NIS
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nis"
+                            placeholder="Contoh: 001"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Nama -->
+                    <div class="form-group">
+
+                        <label for="nama">
+                            Nama Santri
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            placeholder="Masukkan nama santri"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Jenis Kelamin -->
+                    <div class="form-group">
+
+                        <label for="jenisKelamin">
+                            Jenis Kelamin
+                        </label>
+
+                        <select id="jenisKelamin" required>
+
+                            <option value="">
+                                Pilih jenis kelamin
+                            </option>
+
+                            <option value="Laki-laki">
+                                Ikhwan
+                            </option>
+
+                            <option value="Perempuan">
+                                Akhwat
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Kelas -->
+                    <div class="form-group">
+
+                        <label for="kelas">
+                            Kelas
+                        </label>
+
+                        <input
+                            type="text"
+                            id="kelas"
+                            placeholder="Contoh: VII"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Angkatan -->
+                    <div class="form-group">
+
+                        <label for="angkatan">
+                            Angkatan
+                        </label>
+
+                        <input
+                            type="number"
+                            id="angkatan"
+                            placeholder="Contoh: 2026"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn-simpan"
+                        id="btnSimpan"
+                    >
+                        <i class='bx bx-save'></i>
+                        <span>Simpan Data</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-batal"
+                        id="btnBatal"
+                    >
+                        Batal
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             DAFTAR SANTRI
+        ========================== -->
+        <section class="admin-card">
+
+            <div class="data-header">
+
+                <div>
+                    <h2>
+                        Daftar Santri
+                    </h2>
+
+                    <p>
+                        Data santri yang tersimpan pada browser.
+                    </p>
+                </div>
+
+                <button type="button" id="btnExport" class="btn-export">
+                    <i class='bx bx-download'></i>
+                    <span>Export Data</span>
+                </button>
+
+                <button type="button" id="btnImport" class="btn-import">
+                    <i class='bx bx-upload'></i>
+                    <span>Import Data</span>
+                </button>
+                
+                <input type="file" id="fileImport" accept=".csv" hidden>
+
+
+                <!-- SEARCH -->
+                <div class="admin-filters">
+
+                    <!-- PENCARIAN -->
+                    <div class="admin-search">
+                    
+                        <i class='bx bx-search'></i>
+                    
+                        <input
+                            type="text"
+                            id="searchSantri"
+                            placeholder="Cari nama atau NIS..."
+                        >
+                    
+                    </div>
+                
+                
+                    <!-- FILTER KELAS -->
+                    <select id="filterKelas">
+                    
+                        <option value="">
+                            Semua Kelas
+                        </option>
+                    
+                    </select>
+                
+                
+                    <!-- FILTER ANGKATAN -->
+                    <select id="filterAngkatan">
+                    
+                        <option value="">
+                            Semua Angkatan
+                        </option>
+                    
+                    </select>
+                
+                </div>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>No</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Kelas</th>
+                            <th>Angkatan</th>
+                            <th>Aksi</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="santriTableBody">
+
+                        <!-- Data akan dibuat oleh JavaScript -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="empty-data"
+                id="emptyData"
+            >
+
+                <i class='bx bx-user-x'></i>
+
+                <h3>
+                    Belum ada data santri
+                </h3>
+
+                <p>
+                    Tambahkan data santri menggunakan form di atas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="../assets/js/santri_admin.js"></script>
+    <script src="../assets/js/santri.js"></script>
+
+</body>
+</html>

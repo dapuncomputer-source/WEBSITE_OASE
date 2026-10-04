@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Website resmi Pesantren OASE AL QURAN. Informasi Profil, kegiatan, Data santri, Dan pendaftaran">
+    <title>Data Santri - Pondok Pesantren Oase Al-Quran</title>
+
+    <!-- icon tab -->
+    <link rel="icon" type="image/png" href="../assets/images/logo/logo_tab.png">
+
+    <!-- Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Menyambung ke CSS Utama -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Menyambung ke CSS Tentang -->
+    <link rel="stylesheet" href="../assets/css/data_santri/santri.css">
+    
+</head>
+<body>
+    <!-- =========================================== -->
+    <!-- =============== [ NAVBAR ] ================ -->
+    <!-- =========================================== -->
+    <nav class="oase-navbar">
+        <div>
+            <!-- LOGO DESKOP & LAPTOP -->
+            <div class="logo-oase">
+                <img
+                    class="logo_deskop"
+                    src="../assets/images/logo/logo.png"
+                    alt="Logo Pesantren Deskop"
+                >
+
+                <!-- LOGO TABLET -->
+                <img
+                    class="logo_mobile"
+                    src="../assets/images/logo/logo_mobile.png"
+                    alt="Logo Pesantren Mobile"
+                >
+            </div>
+            <!-- NAVIGASI -->
+            <div class="navigasi">
+                <div class="media">
+                    <div class="social_media">
+                        <ul>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran"><i class='bx bxl-tiktok'></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEARCH -->
+                    <div class="search">
+                        <button type="button" class="search_icon" id="searchOpen">
+                            <i class='bx bx-search'></i>
+                        </button>
+
+                        <div class="search_box" id="searchBox">
+                            <input 
+                                type="text"
+                                id="searchInput"
+                                placeholder="Cari informasi..."
+                                autocomplete="off"
+                            >
+
+                            <button type="button" id="searchClear" class="search_clear">
+                                <i class='bx bx-x'></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar_nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li class="dropdown-info">
+                            <a href="#" id="infoTogle">Informasi <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_info">
+                                <li><a href="../informasi/index.html">Tentang Pondok</a></li>
+                                <li><a href="../informasi/tentang/sambutan.html">Sambutan Pimpinan</a></li>
+                                <li><a href="../informasi/tentang/sejarah.html">Sejarah</a></li>
+                                <li><a href="../informasi/tentang/visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="../informasi/program pondok/program.html">Program Pondok</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="../data-santri/index.html">Data Santri</a></li>
+                        <li class="dropdown-berita">
+                            <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_berita">
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Kegiatan</a></li>
+                                <li><a href="#">Pengunguman</a></li>
+                                <li><a href="#">Dokumentasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    
+    <main class="santri-page">
+
+        <!-- HEADER -->
+        <section class="santri-header">
+
+            <span class="santri-label">
+                Data Santri
+            </span>
+
+            <h1>
+                Data Santri Oase
+            </h1>
+
+            <p>
+                Informasi umum mengenai santri Pesantren Oase Al-Qur'an.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             STATISTIK
+        ========================== -->
+        <section class="santri-statistik">
+
+            <div class="statistik-card">
+
+                <div class="statistik-icon">
+                    <i class='bx bx-group'></i>
+                </div>
+            
+                <div class="statistik-info">
+                    <span>Total Santri</span>
+                    <strong id="totalSantri">0</strong>
+                </div>
+            
+            </div>
+
+
+            <div class="statistik-card">
+
+                <div class="statistik-icon">
+                    <i class='bx bx-male'></i>
+                </div>
+
+                <div class="statistik-info">
+                    <span>Santri Putra</span>
+                    <strong id="santriPutra">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="statistik-card">
+
+                <div class="statistik-icon">
+                    <i class='bx bx-female'></i>
+                </div>
+            
+                <div class="statistik-info">
+                    <span>Santri Putri</span>
+                    <strong id="santriPutri">0</strong>
+                </div>
+            
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ANGKATAN
+        ========================== -->
+        <section class="santri-angkatan">
+
+            <div class="section-heading">
+
+                <span>Informasi Santri</span>
+
+                <h2>
+                    Data Berdasarkan Angkatan
+                </h2>
+
+            </div>
+
+
+            <div class="angkatan-list" id="angkatanList">
+
+                <!-- Angkatan akan diisi secara dinamis melalui JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMASI
+        ========================== -->
+        <section class="santri-notice">
+
+            <div class="notice-icon">
+                <i class='bx bx-info-circle'></i>
+            </div>
+
+            <div>
+                <h2>Informasi Data Santri</h2>
+
+                <p>
+                    Data lengkap santri dikelola oleh pihak pondok
+                    dan hanya dapat diakses oleh pihak yang memiliki
+                    kewenangan.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <!-- =========================================== -->
+    <!-- ================= FOOTER ================== -->
+    <!-- =========================================== -->
+    <footer class="oase-footer">
+
+        <div class="footer_container">
+
+            <!-- BAGIAN KIRI -->
+            <div class="footer_brand">
+
+                <img 
+                    src="../assets/images/logo/Footer.png" 
+                    alt="Pesantren Oase Al-Qur'an Bandung"
+                >
+
+                <p>
+                    Pesantren Oase Al-Qur'an Bandung
+                </p>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer_social">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAGIAN TENGAH -->
+            <div class="footer_contact">
+
+                <h3>Hubungi Kami</h3>
+
+                <a href="#">
+                    <i class='bx bx-map'></i>
+                    <span>
+                        Alamat Pesantren Oase Al-Qur'an Bandung
+                    </span>
+                </a>
+
+                <a href="mailto:email@pesantren-oase.sch.id">
+                    <i class='bx bx-envelope'></i>
+                    <span>
+                        email@pesantren-oase.sch.id
+                    </span>
+                </a>
+
+                <a href="tel:08000000000">
+                    <i class='bx bx-phone'></i>
+                    <span>
+                        08xxxxxxxxxx
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- BAGIAN KANAN -->
+            <div class="footer_navigation">
+
+                <h3>Navigasi</h3>
+
+                <a href="#">Beranda</a>
+                <a href="#">Informasi</a>
+                <a href="#">Data Santri</a>
+                <a href="#">Berita</a>
+                <a href="#">Pendaftaran</a>
+                <a href="#">Kontak</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer_bottom">
+
+            <p>
+                © 2026 Pesantren Oase Al-Qur'an Bandung
+            </p>
+
+        </div>
+
+    </footer>
+
+<!-- Menyanbung ke JS -->
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/santri.js"></script>
+</body>
+</html>

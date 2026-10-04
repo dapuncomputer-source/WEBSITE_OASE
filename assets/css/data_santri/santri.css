@@ -1,0 +1,318 @@
+/* =================================
+   DATA SANTRI
+================================= */
+.santri-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+.santri-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.santri-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--biru-utama);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.santri-header h1 {
+    margin: 0 0 15px;
+    color: var(--biru-tua);
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.santri-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   STATISTIK
+================================= */
+
+.santri-statistik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+.statistik-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.statistik-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--biru-muda);
+    color: var(--biru-utama);
+    border-radius: 50%;
+}
+
+.statistik-icon i {
+    font-size: 27px;
+}
+
+.statistik-info span {
+    display: block;
+    margin-bottom: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.statistik-info strong {
+    color: var(--biru-tua);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   ANGKATAN
+================================= */
+
+.santri-angkatan {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading span {
+    color: var(--biru-utama);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.section-heading h2 {
+    margin: 6px 0 0;
+    color: var(--biru-tua);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.angkatan-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.angkatan-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.angkatan-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.angkatan-card > i {
+    font-size: 27px;
+    color: var(--biru-utama);
+}
+
+.angkatan-card div {
+    flex: 1;
+}
+
+.angkatan-card span {
+    display: block;
+    margin-bottom: 2px;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.angkatan-card h3 {
+    margin: 0;
+    color: var(--biru-tua);
+    font-size: 20px;
+}
+
+.angkatan-card > strong {
+    color: var(--gelap);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =================================
+   NOTICE
+================================= */
+
+.santri-notice {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 25px;
+    background: var(--biru-muda);
+    border-radius: 12px;
+}
+
+.notice-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--putih);
+    color: var(--biru-utama);
+    border-radius: 50%;
+}
+
+.notice-icon i {
+    font-size: 25px;
+}
+
+.santri-notice h2 {
+    margin: 0 0 5px;
+    color: var(--biru-tua);
+    font-size: 17px;
+}
+
+.santri-notice p {
+    margin: 0;
+    color: var(--gelap);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 992px) {
+
+    .santri-page {
+        padding: 55px 20px;
+    }
+
+    .santri-header h1 {
+        font-size: 34px;
+    }
+
+    .santri-statistik {
+        gap: 15px;
+    }
+
+    .angkatan-list {
+        gap: 15px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .santri-page {
+        padding: 45px 15px;
+    }
+
+    .santri-header {
+        margin-bottom: 35px;
+    }
+
+    .santri-header h1 {
+        font-size: 29px;
+    }
+
+    .santri-header p {
+        font-size: 14px;
+    }
+
+    .santri-statistik {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 50px;
+    }
+
+    .angkatan-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .santri-notice {
+        align-items: flex-start;
+
+        padding: 18px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .santri-header h1 {
+        font-size: 26px;
+    }
+
+    .statistik-card {
+        padding: 20px;
+    }
+
+    .statistik-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .statistik-info strong {
+        font-size: 23px;
+    }
+
+    .angkatan-card {
+        padding: 17px;
+    }
+
+}
