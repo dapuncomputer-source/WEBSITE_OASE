@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Pengajar | Oase</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/admin.css">
+    <link rel="stylesheet" href="../assets/css/data_pengajar/pengajar.css">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-logo">
+                <strong>Oase Admin</strong>
+                <span>Panel Administrasi</span>
+            </div>
+
+
+            <nav class="admin-nav">
+
+                <a href="../admin/admin.html">
+                    <i class='bx bx-home'></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../santri/admin.html">
+                    <i class='bx bx-group'></i>
+                    <span>Data Santri</span>
+                </a>
+
+                <a href="admin.html" class="active">
+                    <i class='bx bx-user'></i>
+                    <span>Pengajar</span>
+                </a>
+
+                <a href="../pengurus/admin.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span>Pengurus</span>
+                </a>
+
+                <a href="../berita/admin.html">
+                    <i class='bx bx-news'></i>
+                    <span>Berita</span>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-images'></i>
+                    <span>Galeri</span>
+                </a>
+
+            </nav>
+
+
+            <button type="button" id="btnLogout" class="admin-logout">
+                <i class='bx bx-log-out'></i>
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- KONTEN -->
+
+        <div class="admin-content">
+
+            <main class="admin-pengajar">
+
+                <section class="pengajar-header">
+
+                    <div>
+                        <span class="dashboard-label">
+                            DATA PENGAJAR
+                        </span>
+
+                        <h1>Data Pengajar</h1>
+
+                        <p>
+                            Kelola data pengajar Pondok Oase.
+                        </p>
+                    </div>
+
+                </section>
+
+
+                <!-- STATISTIK -->
+                <section class="pengajar-statistik">
+
+                    <div class="pengajar-stat-card">
+
+                        <div class="pengajar-stat-icon">
+                            <i class='bx bx-group'></i>
+                        </div>
+
+                        <div>
+                            <span>Total Pengajar</span>
+                            <strong id="totalPengajar">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pengajar-stat-card">
+
+                        <div class="pengajar-stat-icon">
+                            <i class='bx bx-male'></i>
+                        </div>
+
+                        <div>
+                            <span>Pengajar Laki-laki</span>
+                            <strong id="pengajarLaki">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pengajar-stat-card">
+
+                        <div class="pengajar-stat-icon">
+                            <i class='bx bx-female'></i>
+                        </div>
+
+                        <div>
+                            <span>Pengajar Perempuan</span>
+                            <strong id="pengajarPerempuan">0</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FORM -->
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+                            <span class="dashboard-label">
+                                FORM DATA
+                            </span>
+
+                            <h2 id="formTitle">
+                                Tambah Pengajar
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <form id="pengajarForm">
+
+                        <input
+                            type="hidden"
+                            id="pengajarId"
+                        >
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="nip">
+                                    NIP / ID Pengajar
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nip"
+                                    placeholder="Contoh: PG001"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="nama">
+                                    Nama Lengkap
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nama"
+                                    placeholder="Masukkan nama lengkap"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="jenisKelamin">
+                                    Jenis Kelamin
+                                </label>
+
+                                <select id="jenisKelamin" required>
+
+                                    <option value="">
+                                        Pilih Jenis Kelamin
+                                    </option>
+
+                                    <option value="Laki-laki">
+                                        Laki-laki
+                                    </option>
+
+                                    <option value="Perempuan">
+                                        Perempuan
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bidang">
+                                    Bidang
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bidang"
+                                    placeholder="Contoh: Tahsin"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="jabatan">
+                                    Jabatan
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="jabatan"
+                                    placeholder="Contoh: Ustadz"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                id="btnBatal"
+                                class="btn-batal"
+                            >
+                                Batal
+                            </button>
+
+                            <button
+                                type="submit"
+                                id="btnSimpan"
+                                class="btn-simpan"
+                            >
+                                <i class='bx bx-save'></i>
+                                <span>Simpan Data</span>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- DATA -->
+                <section class="admin-card">
+
+                    <div class="data-header">
+
+                        <div>
+                            <span class="dashboard-label">
+                                DAFTAR PENGAJAR
+                            </span>
+
+                            <h2>Data Pengajar</h2>
+                        </div>
+
+
+                        <div class="data-actions">
+
+                            <button
+                                type="button"
+                                id="btnExport"
+                                class="btn-export"
+                            >
+                                <i class='bx bx-download'></i>
+                                <span>Export Data</span>
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="btnImport"
+                                class="btn-import"
+                            >
+                                <i class='bx bx-upload'></i>
+                                <span>Import Data</span>
+                            </button>
+
+                            <input
+                                type="file"
+                                id="fileImport"
+                                accept=".csv"
+                                hidden
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FILTER -->
+
+                    <div class="admin-filters">
+
+                        <div class="admin-search">
+
+                            <i class='bx bx-search'></i>
+
+                            <input
+                                type="text"
+                                id="searchPengajar"
+                                placeholder="Cari nama atau ID..."
+                            >
+
+                        </div>
+
+
+                        <select id="filterBidang">
+
+                            <option value="">
+                                Semua Bidang
+                            </option>
+
+                        </select>
+
+
+                        <select id="filterJabatan">
+
+                            <option value="">
+                                Semua Jabatan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TABEL -->
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>No</th>
+                                    <th>NIP / ID</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Bidang</th>
+                                    <th>Jabatan</th>
+                                    <th>Aksi</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="pengajarTableBody">
+                                <!-- Data dibuat JavaScript -->
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        id="emptyData"
+                        class="empty-data"
+                    >
+                        <i class='bx bx-user'></i>
+
+                        <h3>Belum ada data pengajar</h3>
+
+                        <p>
+                            Tambahkan data pengajar melalui form di atas.
+                        </p>
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/data_pengajar/pengajar.js"></script>
+
+</body>
+
+</html>

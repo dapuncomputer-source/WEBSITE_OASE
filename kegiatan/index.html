@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+          content="Kegianan santri Pesantren Oase Al-Qur'an. Informasi alur program hafalan santri dan jadwal kegiatan santri.">
+    <title>Kegiatan Santri | Oase</title>
+
+    <!-- Warna tema browser -->
+    <meta name="theme-color" content="#0B4F8A">
+
+    <!-- Informasi saat halaman dibagikan -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kegiatan Santri | Oase">
+    <meta property="og:description" content="Kegianan santri Pesantren Oase Al-Qur'an. Informasi alur program hafalan santri dan jadwal kegiatan santri.">
+    <meta property="og:url" content="https://www.oasealquran.ponpes.id/kegiatan/">
+
+
+    <!-- CSS utama website -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- CSS khusus halaman kegiatan -->
+    <link rel="stylesheet" href="../assets/css/kegiatan/kegiatan.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- =========================================== -->
+    <!-- =============== [ NAVBAR ] ================ -->
+    <!-- =========================================== -->
+    <nav class="oase-navbar">
+        <div>
+            <!-- LOGO DESKOP & LAPTOP -->
+            <div class="logo-oase">
+                <img
+                    class="logo_deskop"
+                    src="../assets/images/logo/logo.png"
+                    alt="Logo Pesantren Deskop"
+                >
+
+                <!-- LOGO TABLET -->
+                <img
+                    class="logo_mobile"
+                    src="../assets/images/logo/logo_mobile.png"
+                    alt="Logo Pesantren Mobile"
+                >
+            </div>
+            <!-- NAVIGASI -->
+            <div class="navigasi">
+                <div class="media">
+                    <div class="social_media">
+                        <ul>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran"><i class='bx bxl-tiktok'></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEARCH -->
+                    <div class="search">
+                        <button type="button" class="search_icon" id="searchOpen">
+                            <i class='bx bx-search'></i>
+                        </button>
+
+                        <div class="search_box" id="searchBox">
+                            <input 
+                                type="text"
+                                id="searchInput"
+                                placeholder="Cari informasi..."
+                                autocomplete="off"
+                            >
+
+                            <button type="button" id="searchClear" class="search_clear">
+                                <i class='bx bx-x'></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar_nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li class="dropdown-info">
+                            <a href="#" id="infoTogle">Informasi <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_info">
+                                <li><a href="../informasi/index.html">Tentang Pondok</a></li>
+                                <li><a href="../informasi/tentang/sambutan.html">Sambutan Pimpinan</a></li>
+                                <li><a href="../informasi/tentang/sejarah.html">Sejarah</a></li>
+                                <li><a href="../informasi/tentang/visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="../informasi/program pondok/program.html">Program Pondok</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="../santri/index.html">Data Santri</a></li>
+                        <li class="dropdown-berita">
+                            <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_berita">
+                                <li><a href="../berita/index.html">Berita</a></li>
+                                <li><a href="../kegiatan/index.html">Kegiatan</a></li>
+                                <li><a href="#">Pengunguman</a></li>
+                                <li><a href="#">Dokumentasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <main class="halaman-kegiatan">
+    <div class="kegiatan_container">
+
+        <section class="kegiatan_header">
+            <!-- Label, judul, dan deskripsi -->
+            <span class="kegiatan_label">
+                <i class="bx bx-book-open"></i>
+                PROGRAM KEGIATAN SANTRI
+            </span>
+        
+            <h1>Alur Program Hafalan Santri</h1>
+        
+            <p>
+                Mengenal tahapan program hafalan santri Pesantren Oase Al-Qur'an,
+                mulai dari perencanaan hafalan hingga apresiasi hafalan bulanan.
+            </p>
+        </section>
+
+
+
+
+        <section class="kegiatan_diagram">
+
+            <div class="kegiatan_grid">
+            
+                <!-- Tahap 1 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/perencanaan hafalan.jpg"
+                            alt="Dokumentasi perencanaan hafalan santri"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">01</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>Perencanaan Hafalan</h2>
+                        <p>
+                            Santri membuat rencana hafalan untuk satu pekan
+                            ke depan di dalam kertas perencanaan.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="0">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 2 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/ta'aruf.jpg"
+                            alt="Dokumentasi tahap ta'aruf"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">02</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>Ta'aruf</h2>
+                        <p>
+                            Santri membaca atau mengenali halaman yang akan
+                            dihafalkan pada malam sebelum menghafalnya.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="1">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 3 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/kitabah.jpg"
+                            alt="Dokumentasi tahap kitabah"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">03</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>Kitabah</h2>
+                        <p>
+                            Santri menulis hafalan yang akan dihafalkan
+                            untuk esok hari dalam satu buku.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="2">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 4 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/ziyadah.jpg"
+                            alt="Dokumentasi tahap ziyadah"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">04</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>Ziyadah</h2>
+                        <p>
+                            Santri menghafal selama satu jam dan menyetorkannya
+                            kepada pembimbing atau asatidz.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="3">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 5 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/mhb.jpg"
+                            alt="Dokumentasi murajaah hafalan baru"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">05</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>MHB</h2>
+                        <p>
+                            Murajaah hafalan baru. Santri menyetorkan kembali
+                            hafalan baru kepada teman untuk memperkuat hafalan.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="4">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 6 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/mhl.jpg"
+                            alt="Dokumentasi murajaah hafalan lama"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">06</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>MHL</h2>
+                        <p>
+                            Murajaah hafalan lama. Santri mengulang hafalan
+                            yang dimiliki dengan metode 3M: maju, mundur, mutqin.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="5">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 7 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/ahp.jpg"
+                            alt="Dokumentasi apresiasi hafalan pekanan"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">07</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>AHP</h2>
+                        <p>
+                            Apresiasi Hafalan Pekanan. Santri mengujikan hafalan
+                            yang dihafalkan dan diulang selama satu pekan.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="6">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+                <!-- Tahap 8 -->
+                <article class="kegiatan_card">
+                    <div class="kegiatan_gambar">
+                        <img
+                            src="../assets/images/kegiatan/ahb.jpg"
+                            alt="Dokumentasi apresiasi hafalan bulanan"
+                            loading="lazy"
+                        >
+                        <span class="kegiatan_nomor">08</span>
+                    </div>
+                
+                    <div class="kegiatan_isi">
+                        <h2>AHB</h2>
+                        <p>
+                            Apresiasi Hafalan Bulanan. Di akhir bulan, santri
+                            menyetorkan hafalan dari awal sampai akhir dengan tartil.
+                        </p>
+                        <button class="kegiatan_detail" type="button"
+                            data-tahap="7">
+                            Selengkapnya <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </article>
+            
+            </div>
+
+            <!-- Modal detail kegiatan -->
+            <div class="kegiatan_modal" id="modalKegiatan" hidden>
+                <div
+                    class="kegiatan_modal_konten"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="modalKegiatanJudul"
+                    aria-describedby="modalKegiatanDeskripsi"
+                >
+                    <button
+                        type="button"
+                        class="kegiatan_modal_tutup"
+                        id="tutupModalKegiatan"
+                        aria-label="Tutup detail"
+                    >
+                        &times;
+                    </button>
+                
+                    <span class="kegiatan_modal_label">
+                        DETAIL KEGIATAN SANTRI
+                    </span>
+                
+                    <h2 id="modalKegiatanJudul"></h2>
+                    <p id="modalKegiatanDeskripsi"></p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- JADWAL KEGIATAN SANTRI -->
+        
+        <section class="kegiatan_jadwal" id="jadwal-kegiatan">
+            <div class="jadwal_header">
+                <span class="jadwal_label">
+                    <i class="bx bx-calendar"></i>
+                    JADWAL SANTRI
+                </span>
+            
+                <h2>Jadwal Kegiatan Santri</h2>
+            
+                <p>
+                    Informasi waktu kegiatan santri Pesantren Oase Al-Qur'an.
+                </p>
+            </div>
+        
+            <div class="jadwal_tabel_wrapper">
+                <table class="jadwal_tabel">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Waktu</th>
+                            <th>Kegiatan</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody id="daftarJadwal">
+                        <tr>
+                            <td colspan="4" class="jadwal_kosong">
+                                Jadwal kegiatan belum tersedia.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+    </div>
+</main>
+
+
+
+    <!-- =========================================== -->
+    <!-- ================= FOOTER ================== -->
+    <!-- =========================================== -->
+    <footer class="oase-footer">
+
+        <div class="footer_container">
+
+            <!-- BAGIAN KIRI -->
+            <div class="footer_brand">
+
+                <img 
+                    src="../assets/images/logo/Footer.png" 
+                    alt="Pesantren Oase Al-Qur'an Bandung"
+                >
+
+                <p>
+                    Pesantren Oase Al-Qur'an Bandung
+                </p>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer_social">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAGIAN TENGAH -->
+            <div class="footer_contact">
+
+                <h3>Hubungi Kami</h3>
+
+                <a href="#">
+                    <i class='bx bx-map'></i>
+                    <span>
+                        Alamat Pesantren Oase Al-Qur'an Bandung
+                    </span>
+                </a>
+
+                <a href="mailto:email@pesantren-oase.sch.id">
+                    <i class='bx bx-envelope'></i>
+                    <span>
+                        email@pesantren-oase.sch.id
+                    </span>
+                </a>
+
+                <a href="tel:08000000000">
+                    <i class='bx bx-phone'></i>
+                    <span>
+                        08xxxxxxxxxx
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- BAGIAN KANAN -->
+            <div class="footer_navigation">
+
+                <h3>Navigasi</h3>
+
+                <a href="#">Beranda</a>
+                <a href="#">Informasi</a>
+                <a href="#">Data Santri</a>
+                <a href="#">Berita</a>
+                <a href="#">Pendaftaran</a>
+                <a href="#">Kontak</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer_bottom">
+
+            <p>
+                © 2026 Pesantren Oase Al-Qur'an Bandung
+            </p>
+
+            <a href="../admin/login.html" class="footer-admin-login">
+                <i class='bx bx-lock-alt'></i>
+                <span>Login Admin</span>
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript utama website -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/kegiatan/kegiatan.js"></script>
+
+</body>
+</html>

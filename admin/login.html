@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Admin | Oase</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/login.css">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <div class="login-header">
+                <i class='bx bx-shield-quarter'></i>
+
+                <span>ADMIN OASE</span>
+
+                <h1>Login Admin</h1>
+
+                <p>Masuk untuk mengelola website Oase.</p>
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="login-field">
+                    <label for="username">Username</label>
+
+                    <div class="login-input">
+                        <i class='bx bx-user'></i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Masukkan username"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <div class="login-field">
+                    <label for="password">Password</label>
+
+                    <div class="login-input">
+                        <i class='bx bx-lock-alt'></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <p id="loginError" class="login-error"></p>
+
+
+                <button type="submit" class="btn-login">
+                    <i class='bx bx-log-in'></i>
+                    <span>Masuk</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="../assets/js/admin/login.js"></script>
+
+</body>
+
+</html>

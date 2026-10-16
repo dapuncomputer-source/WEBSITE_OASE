@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Berita | Oase</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/admin.css">
+    <link rel="stylesheet" href="../assets/css/data_berita/admin.css">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-logo">
+                <strong>Oase Admin</strong>
+                <span>Panel Administrasi</span>
+            </div>
+
+            <nav class="admin-nav">
+
+                <a href="../admin/admin.html">
+                    <i class='bx bx-home'></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../santri/admin.html">
+                    <i class='bx bx-group'></i>
+                    <span>Data Santri</span>
+                </a>
+
+                <a href="../pengajar/admin.html">
+                    <i class='bx bx-user'></i>
+                    <span>Pengajar</span>
+                </a>
+
+                <a href="../pengurus/admin.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span>Pengurus</span>
+                </a>
+
+                <a href="admin.html" class="active">
+                    <i class='bx bx-news'></i>
+                    <span>Berita</span>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-images'></i>
+                    <span>Galeri</span>
+                </a>
+
+            </nav>
+
+            <button
+                type="button"
+                id="btnLogout"
+                class="admin-logout"
+            >
+                <i class='bx bx-log-out'></i>
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content">
+
+            <main class="admin-berita">
+
+                <!-- HEADER -->
+                <header class="berita-header">
+
+                    <span>KELOLA BERITA</span>
+
+                    <h1>Data Berita</h1>
+
+                    <p>
+                        Buat dan kelola berita Pondok Oase.
+                    </p>
+
+                </header>
+
+
+                <!-- FORM BERITA -->
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>FORM BERITA</span>
+
+                            <h2 id="formTitle">
+                                Tambah Berita
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="beritaForm">
+
+                        <!-- ID -->
+                        <input
+                            type="hidden"
+                            id="beritaId"
+                        >
+
+
+                        <!-- DATA DASAR -->
+                        <div class="form-grid">
+
+                            <!-- JUDUL -->
+                            <div class="form-group form-full">
+
+                                <label for="judul">
+                                    Judul Berita
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="judul"
+                                    placeholder="Masukkan judul berita"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- KATEGORI -->
+                            <div class="form-group">
+
+                                <label for="kategori">
+                                    Kategori
+                                </label>
+
+                                <select
+                                    id="kategori"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Pilih kategori
+                                    </option>
+
+                                    <option value="Kegiatan">
+                                        Kegiatan
+                                    </option>
+
+                                    <option value="Pengumuman">
+                                        Pengumuman
+                                    </option>
+
+                                    <option value="Pendidikan">
+                                        Pendidikan
+                                    </option>
+
+                                    <option value="Prestasi">
+                                        Prestasi
+                                    </option>
+
+                                    <option value="Informasi">
+                                        Informasi
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PENULIS -->
+                            <div class="form-group">
+
+                                <label for="penulis">
+                                    Penulis
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="penulis"
+                                    placeholder="Nama penulis"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- TANGGAL -->
+                            <div class="form-group">
+
+                                <label for="tanggal">
+                                    Tanggal
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="tanggal"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GAMBAR UTAMA -->
+                        <div class="berita-media-section">
+
+                            <div class="section-label">
+
+                                <span>GAMBAR UTAMA</span>
+
+                                <p>
+                                    Gambar yang tampil sebagai foto utama berita.
+                                </p>
+
+                            </div>
+
+
+                            <div class="image-upload-box">
+
+                                <input
+                                    type="file"
+                                    id="gambarUtama"
+                                    accept="image/*"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ISI BERITA -->
+                        <div class="berita-content-section">
+
+                            <div class="section-label">
+
+                                <span>ISI BERITA</span>
+
+                                <p>
+                                    Susun teks dan gambar sesuai kebutuhan berita.
+                                </p>
+
+                            </div>
+
+
+                            <div
+                                id="beritaContent"
+                                class="berita-content"
+                            >
+
+                                <!--
+                                    Elemen teks dan gambar
+                                    akan dibuat oleh JavaScript
+                                -->
+
+                            </div>
+
+
+                            <div class="content-actions">
+
+                                <button
+                                    type="button"
+                                    id="btnTambahTeks"
+                                    class="btn-content"
+                                >
+                                    <i class='bx bx-text'></i>
+                                    <span>Tambah Teks</span>
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    id="btnTambahGambar"
+                                    class="btn-content"
+                                >
+                                    <i class='bx bx-image-add'></i>
+                                    <span>Tambah Gambar</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTION FORM -->
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                id="btnBatal"
+                                class="btn-batal"
+                            >
+                                <i class='bx bx-x'></i>
+                                <span>Batal</span>
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                id="btnSimpan"
+                                class="btn-simpan"
+                            >
+                                <i class='bx bx-save'></i>
+                                <span>Simpan Berita</span>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- DAFTAR BERITA -->
+                <section class="admin-card">
+
+                    <div class="data-header">
+
+                        <div>
+
+                            <span>DATA TERSIMPAN</span>
+
+                            <h2>Daftar Berita</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SEARCH -->
+                    <div class="admin-filters">
+
+                        <div class="admin-search">
+
+                            <i class='bx bx-search'></i>
+
+                            <input
+                                type="text"
+                                id="searchBerita"
+                                placeholder="Cari judul berita..."
+                            >
+
+                        </div>
+
+
+                        <select id="filterKategori">
+
+                            <option value="">
+                                Semua Kategori
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TABLE -->
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>No</th>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Penulis</th>
+                                    <th>Tanggal</th>
+                                    <th>Aksi</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="beritaTableBody">
+
+                                <!--
+                                    Data berita dibuat
+                                    oleh JavaScript
+                                -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- EMPTY -->
+                    <div
+                        id="emptyData"
+                        class="empty-data"
+                    >
+
+                        <i class='bx bx-news'></i>
+
+                        <h3>
+                            Belum ada berita
+                        </h3>
+
+                        <p>
+                            Silakan tambahkan berita melalui form di atas.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/berita/admin_berita.js"></script>
+
+</body>
+
+</html>

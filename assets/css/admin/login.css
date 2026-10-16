@@ -1,0 +1,144 @@
+/* =================================
+   LOGIN ADMIN
+================================= */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--biru-muda);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+    background: var(--biru-muda);
+    color: var(--biru-utama);
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+.login-header span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-header h1 {
+    margin: 0 0 6px;
+    color: var(--gelap);
+    font-size: 25px;
+}
+
+.login-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.login-field {
+    margin-bottom: 18px;
+}
+
+.login-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--gelap);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login-input {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+}
+
+.login-input:focus-within {
+    border-color: var(--biru-utama);
+}
+
+.login-input i {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.login-input input {
+    width: 100%;
+    padding: 11px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--gelap);
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.login-error {
+    display: none;
+    margin: 0 0 15px;
+    color: #dc2626;
+    font-size: 12px;
+}
+
+.login-error.show {
+    display: block;
+}
+
+.btn-login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: var(--biru-utama);
+    color: var(--putih);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-login:hover {
+    background: var(--biru-tua);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 25px 20px;
+    }
+}

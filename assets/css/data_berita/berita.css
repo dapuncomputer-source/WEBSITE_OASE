@@ -1,0 +1,423 @@
+
+/* =================================
+   HALAMAN BERITA PUBLIK OASE
+================================= */
+
+.halaman-berita {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    color: var(--gelap, #1F2937);
+}
+
+/* =================================
+   LAYOUT ARTIKEL DAN SIDEBAR
+================================= */
+
+.berita-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(250px, 0.9fr);
+    gap: 46px;
+    align-items: start;
+}
+
+/* =================================
+   ARTIKEL UTAMA
+================================= */
+
+.artikel-utama {
+    min-width: 0;
+    width: 100%;
+}
+
+.artikel-header {
+    margin-bottom: 24px;
+}
+
+.artikel-kategori {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    background: var(--biru-muda, #EAF4FF);
+    color: var(--biru-utama, #0B4F8A);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.artikel-header h1 {
+    margin: 0 0 18px;
+    color: #000000;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.artikel-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 22px;
+    color: #6B7280;
+    font-size: 13px;
+}
+
+.artikel-meta > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.artikel-meta i {
+    color: var(--toska, #18A7A0);
+    font-size: 17px;
+}
+
+/* =================================
+   GAMBAR UTAMA
+================================= */
+
+.artikel-gambar-utama {
+    width: 100%;
+    margin: 0 0 28px;
+}
+
+.artikel-gambar-utama img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.artikel-gambar-utama img[hidden] {
+    display: none;
+}
+
+/* =================================
+   ISI ARTIKEL
+================================= */
+
+.artikel-isi {
+    font-size: 16px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    color: #000;
+}
+
+.artikel-isi p {
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.artikel-isi h2 {
+    margin: 32px 0 14px;
+    color: #000;
+    font-size: 24px;
+    line-height: 1.45;
+}
+
+.artikel-isi h3 {
+    margin: 26px 0 12px;
+    color: #000;
+    font-size: 20px;
+}
+
+.artikel-isi img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    margin: 26px auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.artikel-isi figure {
+    margin: 26px 0;
+}
+
+.artikel-isi figcaption {
+    margin-top: 8px;
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.artikel-isi blockquote {
+    margin: 24px 0;
+    padding: 16px 20px;
+    border-left: 4px solid var(--toska, #18A7A0);
+    background: var(--biru-muda, #EAF4FF);
+    color: #000;
+}
+
+/* =================================
+   NAVIGASI ARTIKEL
+================================= */
+
+.artikel-navigasi {
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.btn-kembali-berita {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 1px solid var(--biru-utama, #0B4F8A);
+    border-radius: 4px;
+    color: var(--biru-utama, #0B4F8A);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-kembali-berita:hover {
+    background: var(--biru-utama, #0B4F8A);
+    color: #FFFFFF;
+}
+
+.btn-kembali-berita i {
+    font-size: 20px;
+}
+
+/* =================================
+   SIDEBAR BERITA TERBARU
+================================= */
+/* Sidebar berita tetap terlihat saat halaman digulir */
+.sidebar-berita {
+    min-width: 0;
+    position: sticky;
+    top: 110px;
+    align-self: start;
+    max-height: calc(100vh - 240px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+/* Judul sidebar tetap terlihat saat daftar berita digulir */
+.sidebar-judul {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #FFFFFF;
+    padding-top: 8px;
+}
+
+.sidebar-judul::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 110px;
+    height: 2px;
+    background: var(--toska, #18A7A0);
+}
+
+.sidebar-judul h2 {
+    margin: 0;
+    color: var(--biru-tua, #063B6B);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/* Daftar berita */
+
+.berita-terbaru-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.berita-terbaru-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 15px 0;
+    border-bottom: 1px solid #E5E7EB;
+    text-decoration: none;
+    transition: padding-left 0.2s ease;
+}
+
+.berita-terbaru-item:hover {
+    padding-left: 5px;
+}
+
+.berita-terbaru-item.active {
+    border-left: 3px solid var(--toska, #18A7A0);
+    padding-left: 12px;
+    background: #F8FBFF;
+}
+
+.berita-terbaru-item h3 {
+    margin: 0;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.berita-terbaru-item:hover h3 {
+    color: var(--toska, #18A7A0);
+}
+
+.berita-terbaru-item time {
+    color: #9CA3AF;
+    font-size: 12px;
+}
+
+.berita-kosong {
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =================================
+   FOOTER BERITA
+================================= */
+
+.footer-berita {
+    padding: 24px 20px;
+    background: var(--biru-tua, #063B6B);
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 13px;
+}
+
+.footer-berita p {
+    margin: 0;
+}
+
+/* =================================
+   RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 900px) {
+    .halaman-berita {
+        padding: 32px 20px 48px;
+    }
+
+    .berita-layout {
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 28px;
+    }
+
+    .artikel-header h1 {
+        font-size: 28px;
+    }
+
+    .artikel-isi {
+        font-size: 15px;
+    }
+
+    .sidebar-judul h2 {
+        font-size: 20px;
+    }
+}
+
+/* =================================
+   RESPONSIVE HP
+================================= */
+
+@media (max-width: 680px) {
+    .halaman-berita {
+        padding: 24px 16px 40px;
+    }
+
+    .berita-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+    }
+
+    .artikel-header {
+        margin-bottom: 20px;
+    }
+
+    .artikel-header h1 {
+        font-size: 25px;
+        line-height: 1.4;
+    }
+
+    .artikel-meta {
+        gap: 10px 16px;
+        font-size: 12px;
+    }
+
+    .artikel-gambar-utama {
+        margin-bottom: 22px;
+    }
+
+    .artikel-gambar-utama img {
+        aspect-ratio: 4 / 3;
+        max-height: 380px;
+    }
+
+    .artikel-isi {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .artikel-isi h2 {
+        font-size: 21px;
+    }
+
+    .artikel-isi h3 {
+        font-size: 18px;
+    }
+
+    .artikel-isi img {
+        margin: 20px auto;
+    }
+
+    .sidebar-berita {
+        position: static;
+        padding-top: 8px;
+        border-top: 2px solid #E5E7EB;
+    }
+
+    .sidebar-judul h2 {
+        font-size: 21px;
+    }
+
+    .berita-terbaru-item {
+        padding: 14px 0;
+    }
+
+    .berita-terbaru-item h3 {
+        font-size: 14px;
+    }
+
+    .footer-berita {
+        padding: 20px 16px;
+    }
+}
+
+/* =================================
+   HP KECIL
+================================= */
+
+@media (max-width: 380px) {
+    .halaman-berita {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .artikel-header h1 {
+        font-size: 22px;
+    }
+
+    .artikel-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

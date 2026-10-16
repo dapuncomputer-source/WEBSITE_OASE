@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Berita | Oase</title>
+
+    <!-- icon tab -->
+    <link rel="icon" type="image/png" href="../assets/images/logo/logo_tab.png">
+
+    <!-- CSS utama website -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- CSS khusus halaman berita -->
+    <link rel="stylesheet" href="../assets/css/data_berita/berita.css">
+
+    <!-- Boxicons -->
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body>
+    <!-- =========================================== -->
+    <!-- =============== [ NAVBAR ] ================ -->
+    <!-- =========================================== -->
+    <nav class="oase-navbar">
+        <div>
+            <!-- LOGO DESKOP & LAPTOP -->
+            <div class="logo-oase">
+                <img
+                    class="logo_deskop"
+                    src="../assets/images/logo/logo.png"
+                    alt="Logo Pesantren Deskop"
+                >
+
+                <!-- LOGO TABLET -->
+                <img
+                    class="logo_mobile"
+                    src="../assets/images/logo/logo_mobile.png"
+                    alt="Logo Pesantren Mobile"
+                >
+            </div>
+            <!-- NAVIGASI -->
+            <div class="navigasi">
+                <div class="media">
+                    <div class="social_media">
+                        <ul>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran" target="_blank" rel="noopener noreferrer"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran" target="_blank" rel="noopener noreferrer"><i class='bx bxl-tiktok'></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEARCH -->
+                    <div class="search">
+                        <button type="button" class="search_icon" id="searchOpen">
+                            <i class='bx bx-search'></i>
+                        </button>
+
+                        <div class="search_box" id="searchBox">
+                            <input 
+                                type="text"
+                                id="searchInput"
+                                placeholder="Cari informasi..."
+                                autocomplete="off"
+                            >
+
+                            <button type="button" id="searchClear" class="search_clear">
+                                <i class='bx bx-x'></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar_nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li class="dropdown-info">
+                            <a href="#" id="infoTogle">Informasi <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_info">
+                                <li><a href="../index.html">Tentang Pondok</a></li>
+                                <li><a href="../tentang/sambutan.html">Sambutan Pimpinan</a></li>
+                                <li><a href="../tentang/sejarah.html">Sejarah</a></li>
+                                <li><a href="../tentang/visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="../program pondok/program.html">Program Pondok</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="../santri/index.html">Data Santri</a></li>
+                        <li class="dropdown-berita">
+                            <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_berita">
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Kegiatan</a></li>
+                                <li><a href="#">Pengunguman</a></li>
+                                <li><a href="#">Dokumentasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <main class="halaman-berita">
+
+        <!-- Bagian utama artikel -->
+        <div class="berita-layout">
+
+            <article class="artikel-utama" id="artikelUtama">
+
+                <!-- Informasi artikel diisi oleh JavaScript -->
+                <header class="artikel-header">
+                    <span class="artikel-kategori" id="artikelKategori">
+                        Berita
+                    </span>
+
+                    <h1 id="artikelJudul">
+                        Memuat berita...
+                    </h1>
+
+                    <div class="artikel-meta">
+                        <span>
+                            <i class="bx bx-calendar"></i>
+                            <time id="artikelTanggal">-</time>
+                        </span>
+
+                        <span>
+                            <i class="bx bx-user"></i>
+                            <span id="artikelPenulis">-</span>
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Gambar utama artikel -->
+                <figure class="artikel-gambar-utama">
+                    <img
+                        id="artikelGambarUtama"
+                        src=""
+                        alt="Gambar utama berita"
+                        hidden
+                    >
+                </figure>
+
+                <!-- Isi artikel: teks dan gambar tambahan -->
+                <div class="artikel-isi" id="artikelIsi">
+                    <p>Berita akan ditampilkan di sini.</p>
+                </div>
+
+                <!-- Navigasi artikel -->
+                <nav class="artikel-navigasi" aria-label="Navigasi berita">
+                    <a href="index.html" class="btn-kembali-berita">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Kembali ke Berita Terbaru
+                    </a>
+                </nav>
+
+            </article>
+
+            <!-- Sidebar berita terbaru -->
+            <aside class="sidebar-berita">
+
+                <div class="sidebar-judul">
+                    <h2>Berita Terbaru</h2>
+                </div>
+
+                <div class="berita-terbaru-list" id="beritaTerbaruList">
+                    <!-- Daftar berita dibuat oleh JavaScript -->
+                    <p class="berita-kosong">
+                        Memuat daftar berita...
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- =========================================== -->
+    <!-- ================= FOOTER ================== -->
+    <!-- =========================================== -->
+    <footer class="oase-footer">
+
+        <div class="footer_container">
+
+            <!-- BAGIAN KIRI -->
+            <div class="footer_brand">
+
+                <img 
+                    src="../assets/images/logo/Footer.png" 
+                    alt="Pesantren Oase Al-Qur'an Bandung"
+                >
+
+                <p>
+                    Pesantren Oase Al-Qur'an Bandung
+                </p>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer_social">
+
+                    <a href="https://www.instagram.com/pesantren.oase.alquran/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/ppq.oasequranibdg/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@pesantren.oase.alquran" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@pesantren.oase.alquran" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAGIAN TENGAH -->
+            <div class="footer_contact">
+
+                <h3>Hubungi Kami</h3>
+
+                <a href="https://www.google.com/maps/place/Pesantren+Oase+Al-Qur'an+Bandung" aria-label="Google Maps" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bx-map'></i>
+                    <span>
+                        Alamat Pesantren Oase Al-Qur'an Bandung
+                    </span>
+                </a>
+
+                <a href="mailto:email@pesantren-oase.sch.id" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bx-envelope'></i>
+                    <span>
+                        email@pesantren-oase.sch.id
+                    </span>
+                </a>
+
+                <a href="tel:08000000000" aria-label="Phone" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bx-phone'></i>
+                    <span>
+                        08xxxxxxxxxx
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- BAGIAN KANAN -->
+            <div class="footer_navigation">
+
+                <h3>Navigasi</h3>
+
+                <a href="#">Beranda</a>
+                <a href="#">Informasi</a>
+                <a href="#">Data Santri</a>
+                <a href="#">Berita</a>
+                <a href="#">Pendaftaran</a>
+                <a href="#">Kontak</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer_bottom">
+            <p>
+                © <span id="tahunFooter">2026</span>
+                Pesantren Oase Al-Qur'an Bandung
+            </p>
+        </div>
+
+
+    </footer>
+
+<!-- Menyanbung ke JS -->
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/berita/berita.js"></script>
+
+</body>
+</html>

@@ -776,6 +776,36 @@ body {
 
 
 
+
+
+
+/* Pesan ketika belum ada berita */
+#pesanBeritaKosong {
+    padding: 24px;
+    color: var(--gelap);
+    text-align: center;
+    background: var(--biru-muda);
+    border-radius: 8px;
+}
+
+/* Gambar berita mengikuti ukuran kartu */
+.berita_card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sembunyikan kartu kecil jika belum ada */
+.berita_list:empty {
+    display: none;
+}
+
+
+
+
+
+
 /* ==================[ MEDIA QUERY ]================== */
 /* ==================[   BERITA   ]=================== */
 /* =====================[ LAPTOP ]==================== */
@@ -1673,7 +1703,7 @@ body {
     max-width: var(--container-width);
     margin: 0 auto;
     padding:
-        20px
+        10px
         var(--container-padding);
 
     color:
@@ -1681,6 +1711,31 @@ body {
 
     font-size: 12px;
     text-align: center;
+}
+
+
+/* =================================
+   LOGIN ADMIN FOOTER
+================================= */
+
+.footer-admin-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 11px;
+    transition: 0.2s ease;
+}
+
+.footer-admin-login i {
+    font-size: 14px;
+}
+
+.footer-admin-login:hover {
+    color: var(--putih);
 }
 
 
@@ -1710,7 +1765,6 @@ body {
 /* ================================================= */
 /* ==================== TABLET ===================== */
 /* ================================================= */
-
 @media (max-width: 992px) {
 
     .footer_container {
@@ -1757,7 +1811,6 @@ body {
 /* ================================================= */
 /* ====================== HP ======================= */
 /* ================================================= */
-
 @media (max-width: 768px) {
 
     .footer_container {
@@ -1855,7 +1908,6 @@ body {
 /* ================================================= */
 /* ================= HP KECIL ====================== */
 /* ================================================= */
-
 @media (max-width: 480px) {
 
     .footer_container {

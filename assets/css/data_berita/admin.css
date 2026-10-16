@@ -1,0 +1,790 @@
+/* =================================
+   HALAMAN ADMIN BERITA
+================================= */
+
+.admin-berita {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.berita-header {
+    margin-bottom: 30px;
+}
+
+.berita-header > span {
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.berita-header h1 {
+    margin: 6px 0;
+    color: var(--gelap);
+    font-size: 30px;
+}
+
+.berita-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =================================
+   CARD
+================================= */
+
+.admin-berita .admin-card {
+    margin-bottom: 24px;
+    padding: 24px;
+
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   HEADER CARD
+================================= */
+
+.admin-berita .admin-card-header,
+.admin-berita .data-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-berita .admin-card-header > div > span,
+.admin-berita .data-header > div > span {
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.admin-berita .admin-card h2,
+.admin-berita .data-header h2 {
+    margin: 4px 0 0;
+    color: var(--gelap);
+    font-size: 20px;
+}
+
+
+/* =================================
+   FORM GRID
+================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    color: var(--gelap);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: var(--putih);
+    color: var(--gelap);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+
+/* =================================
+   SECTION GAMBAR / ISI
+================================= */
+
+.berita-media-section,
+.berita-content-section {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.section-label {
+    margin-bottom: 15px;
+}
+
+.section-label > span {
+    display: block;
+    margin-bottom: 4px;
+
+    color: var(--gelap);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section-label p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* =================================
+   UPLOAD GAMBAR UTAMA
+================================= */
+
+.image-upload-box {
+    padding: 20px;
+
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+
+    background: #f9fafb;
+}
+
+.image-upload-box input[type="file"] {
+    width: 100%;
+
+    color: #6b7280;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+/* =================================
+   CONTENT EDITOR
+================================= */
+
+.berita-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =================================
+   ITEM EDITOR
+================================= */
+
+.content-item {
+    position: relative;
+
+    padding: 16px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    background: #fafafa;
+}
+
+
+/* =================================
+   HEADER ITEM
+================================= */
+
+.content-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.content-item-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--biru-utama);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.content-item-type i {
+    font-size: 17px;
+}
+
+
+/* =================================
+   HAPUS ITEM
+================================= */
+
+.btn-hapus-content {
+    width: 30px;
+    height: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #fee2e2;
+    border-radius: 6px;
+
+    background: #fef2f2;
+    color: #dc2626;
+
+    font-size: 17px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-hapus-content:hover {
+    background: #fee2e2;
+}
+
+
+/* =================================
+   TEXT EDITOR
+================================= */
+
+.content-textarea {
+    width: 100%;
+    min-height: 130px;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: var(--putih);
+    color: var(--gelap);
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.7;
+
+    outline: none;
+    resize: vertical;
+
+    box-sizing: border-box;
+}
+
+.content-textarea:focus {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+
+/* =================================
+   GAMBAR DALAM BERITA
+================================= */
+
+.content-image-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-image-upload input[type="file"] {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px dashed #cbd5e1;
+    border-radius: 7px;
+
+    background: var(--putih);
+
+    color: #6b7280;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+/* =================================
+   PREVIEW GAMBAR
+================================= */
+
+.image-preview {
+    display: none;
+
+    width: 100%;
+    max-height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+    border: 1px solid #e5e7eb;
+}
+
+.image-preview.show {
+    display: block;
+}
+
+
+/* =================================
+   TOMBOL TAMBAH CONTENT
+================================= */
+
+.content-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.btn-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--biru-utama);
+    border-radius: 7px;
+
+    background: var(--putih);
+    color: var(--biru-utama);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-content:hover {
+    background: var(--biru-muda);
+}
+
+.btn-content i {
+    font-size: 17px;
+}
+
+.btn-content:active {
+    transform: scale(0.98);
+}
+
+
+/* =================================
+   FORM ACTIONS
+================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-simpan,
+.btn-batal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-simpan {
+    border: none;
+
+    background: var(--biru-utama);
+    color: var(--putih);
+}
+
+.btn-simpan:hover {
+    background: var(--biru-tua);
+}
+
+.btn-batal {
+    border: 1px solid #d1d5db;
+
+    background: var(--putih);
+    color: #6b7280;
+}
+
+.btn-batal:hover {
+    background: #f9fafb;
+}
+
+.btn-simpan:active,
+.btn-batal:active {
+    transform: scale(0.98);
+}
+
+
+/* =================================
+   SEARCH & FILTER
+================================= */
+
+.admin-berita .admin-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.admin-berita .admin-search {
+    flex: 1;
+    min-width: 200px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 40px;
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: var(--putih);
+}
+
+.admin-berita .admin-search:focus-within {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+.admin-berita .admin-search i {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.admin-berita .admin-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: var(--gelap);
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.admin-berita .admin-filters select {
+    min-width: 150px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: var(--putih);
+    color: var(--gelap);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.admin-berita .admin-filters select:focus {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+
+/* =================================
+   TABLE
+================================= */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.admin-table th {
+    padding: 12px 10px;
+
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 13px 10px;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    color: var(--gelap);
+
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =================================
+   TOMBOL EDIT / HAPUS
+================================= */
+
+.aksi {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-edit,
+.btn-hapus {
+    /* width: 32px; */
+    height: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-edit {
+    border: 1px solid #dbeafe;
+    background: #eff6ff;
+    color: var(--biru-utama);
+}
+
+.btn-edit:hover {
+    background: #dbeafe;
+}
+
+.btn-hapus {
+    border: 1px solid #fee2e2;
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-hapus:hover {
+    background: #fee2e2;
+}
+
+
+
+
+
+
+
+
+
+
+/* Jarak tombol aksi pada tabel berita */
+.admin-table td:last-child {
+    white-space: nowrap;
+}
+
+.admin-table td:last-child .btn-edit,
+.admin-table td:last-child .btn-hapus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Warna tombol Edit */
+.admin-table td:last-child .btn-edit {
+    color: #0B4F8A;
+    border: 1px solid #D5E7FA;
+    background: #EAF4FF;
+}
+
+/* Warna tombol Hapus */
+.admin-table td:last-child .btn-hapus {
+    color: #DC2626;
+    border: 1px solid #FECACA;
+    background: #FEF2F2;
+}
+
+.admin-table td:last-child .btn-edit:hover {
+    background: #D5E7FA;
+}
+
+.admin-table td:last-child .btn-hapus:hover {
+    background: #FEE2E2;
+}
+
+
+
+
+
+
+
+
+
+/* =================================
+   EMPTY DATA
+================================= */
+
+.admin-berita .empty-data {
+    display: none;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.admin-berita .empty-data.show {
+    display: block;
+}
+
+.admin-berita .empty-data i {
+    color: #9ca3af;
+    font-size: 42px;
+}
+
+.admin-berita .empty-data h3 {
+    margin: 10px 0 5px;
+
+    color: var(--gelap);
+    font-size: 16px;
+}
+
+.admin-berita .empty-data p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .admin-berita {
+        width: min(100% - 30px, 600px);
+        padding: 25px 0;
+    }
+
+    .berita-header h1 {
+        font-size: 25px;
+    }
+
+    .admin-berita .admin-card {
+        padding: 18px;
+    }
+
+    .admin-berita .admin-card-header,
+    .admin-berita .data-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .content-actions {
+        flex-direction: column;
+    }
+
+    .btn-content {
+        width: 100%;
+    }
+
+    .admin-berita .admin-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-berita .admin-search {
+        width: 100%;
+    }
+
+    .admin-berita .admin-filters select {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-simpan,
+    .btn-batal {
+        width: 100%;
+    }
+
+}

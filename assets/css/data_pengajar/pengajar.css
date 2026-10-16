@@ -1,0 +1,533 @@
+/* =================================
+   ADMIN PENGAJAR
+================================= */
+
+.admin-pengajar {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.pengajar-header {
+    margin-bottom: 30px;
+}
+
+.pengajar-header h1 {
+    margin: 6px 0;
+    color: var(--gelap);
+    font-size: 30px;
+}
+
+.pengajar-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* STATISTIK */
+
+.pengajar-statistik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.pengajar-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    
+}
+
+.pengajar-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--biru-muda);
+    color: var(--biru-utama);
+    border-radius: 8px;
+    font-size: 23px;
+}
+
+.pengajar-stat-card span {
+    display: block;
+    margin-bottom: 4px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.pengajar-stat-card strong {
+    color: var(--gelap);
+    font-size: 24px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .admin-pengajar {
+        width: min(100% - 30px, 600px);
+        padding: 25px 0;
+    }
+
+    .pengajar-header h1 {
+        font-size: 25px;
+    }
+
+    .pengajar-statistik {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
+
+
+
+
+
+
+
+/* =================================
+   SEARCH
+================================= */
+
+.admin-pengajar .admin-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    height: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: var(--putih);
+    
+}
+
+.admin-pengajar .admin-search:focus-within {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+.admin-pengajar .admin-search i {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.admin-pengajar .admin-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--gelap);
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/* =================================
+   EXPORT & IMPORT
+================================= */
+
+.admin-pengajar .btn-export,
+.admin-pengajar .btn-import {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-pengajar .btn-export {
+    border: none;
+    background: var(--biru-utama);
+    color: var(--putih);
+}
+
+.admin-pengajar .btn-export:hover {
+    background: var(--biru-tua);
+}
+
+.admin-pengajar .btn-import {
+    border: 1px solid var(--biru-utama);
+    background: var(--putih);
+    color: var(--biru-utama);
+}
+
+.admin-pengajar .btn-import:hover {
+    background: var(--biru-muda);
+}
+
+.admin-pengajar .btn-export i,
+.admin-pengajar .btn-import i {
+    font-size: 17px;
+}
+
+.admin-pengajar .btn-export:active,
+.admin-pengajar .btn-import:active {
+    transform: scale(0.98);
+}
+
+
+
+
+
+
+
+/* =================================
+   CARD
+================================= */
+
+.admin-pengajar .admin-card {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--putih);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.admin-pengajar .admin-card-header,
+.admin-pengajar .data-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-pengajar .admin-card h2,
+.admin-pengajar .data-header h2 {
+    margin: 4px 0 0;
+    color: var(--gelap);
+    font-size: 20px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    color: var(--gelap);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: var(--putih);
+    color: var(--gelap);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+
+/* =================================
+   FORM BUTTON
+================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.btn-simpan,
+.btn-batal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-simpan {
+    border: none;
+    background: var(--biru-utama);
+    color: var(--putih);
+}
+
+.btn-simpan:hover {
+    background: var(--biru-tua);
+}
+
+.btn-batal {
+    border: 1px solid #d1d5db;
+    background: var(--putih);
+    color: #6b7280;
+}
+
+.btn-batal:hover {
+    background: #f9fafb;
+}
+
+.btn-simpan:active,
+.btn-batal:active {
+    transform: scale(0.98);
+}
+
+
+/* =================================
+   DATA ACTION
+================================= */
+
+.data-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =================================
+   FILTER
+================================= */
+
+.admin-pengajar .admin-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-pengajar .admin-search {
+    flex: 1;
+    min-width: 200px;
+}
+
+.admin-pengajar .admin-filters select {
+    min-width: 150px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: var(--putih);
+    color: var(--gelap);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+}
+
+.admin-pengajar .admin-filters select:focus {
+    border-color: var(--biru-utama);
+    box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.08);
+}
+
+
+/* =================================
+   TABLE
+================================= */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.admin-table th {
+    padding: 12px 10px;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #f1f1f1;
+    color: var(--gelap);
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =================================
+   AKSI
+================================= */
+
+.aksi {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-edit,
+.btn-hapus {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-edit {
+    border: 1px solid #dbeafe;
+    background: #eff6ff;
+    color: var(--biru-utama);
+}
+
+.btn-edit:hover {
+    background: #dbeafe;
+}
+
+.btn-hapus {
+    border: 1px solid #fee2e2;
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-hapus:hover {
+    background: #fee2e2;
+}
+
+
+/* =================================
+   EMPTY DATA
+================================= */
+
+.admin-pengajar .empty-data {
+    display: none;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.admin-pengajar .empty-data.show {
+    display: block;
+}
+
+.admin-pengajar .empty-data i {
+    font-size: 42px;
+    color: #9ca3af;
+}
+
+.admin-pengajar .empty-data h3 {
+    margin: 10px 0 5px;
+    color: var(--gelap);
+    font-size: 16px;
+}
+
+.admin-pengajar .empty-data p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .admin-pengajar .admin-card {
+        padding: 18px;
+    }
+
+    .admin-pengajar .admin-card-header,
+    .admin-pengajar .data-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .data-actions {
+        width: 100%;
+    }
+
+    .data-actions button {
+        flex: 1;
+    }
+
+    .admin-pengajar .admin-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-pengajar .admin-search {
+        width: 100%;
+    }
+
+    .admin-pengajar .admin-filters select {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-simpan,
+    .btn-batal {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Pengurus | Oase</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/admin.css">
+    <link rel="stylesheet" href="../assets/css/data_pengurus/pengurus.css">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-logo">
+                <strong>Oase Admin</strong>
+                <span>Panel Administrasi</span>
+            </div>
+
+            <nav class="admin-nav">
+
+                <a href="../admin/admin.html">
+                    <i class='bx bx-home'></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../santri/admin.html">
+                    <i class='bx bx-group'></i>
+                    <span>Data Santri</span>
+                </a>
+
+                <a href="../pengajar/admin.html">
+                    <i class='bx bx-user'></i>
+                    <span>Pengajar</span>
+                </a>
+
+                <a href="admin.html" class="active">
+                    <i class='bx bx-user-pin'></i>
+                    <span>Pengurus</span>
+                </a>
+
+                <a href="../berita/admin.html">
+                    <i class='bx bx-news'></i>
+                    <span>Berita</span>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-images'></i>
+                    <span>Galeri</span>
+                </a>
+
+            </nav>
+
+            <button type="button" id="btnLogout" class="admin-logout">
+                <i class='bx bx-log-out'></i>
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content">
+
+            <main class="admin-pengurus">
+
+                <!-- HEADER -->
+                <header class="pengurus-header">
+
+                    <span>DATA PENGURUS</span>
+
+                    <h1>Data Pengurus</h1>
+
+                    <p>
+                        Kelola data pengurus Pondok Oase.
+                    </p>
+
+                </header>
+
+
+                <!-- STATISTIK -->
+                <div class="pengurus-statistik">
+
+                    <div class="pengurus-stat-card">
+
+                        <div class="pengurus-stat-icon">
+                            <i class='bx bx-user-pin'></i>
+                        </div>
+
+                        <div>
+                            <span>Total Pengurus</span>
+                            <strong id="totalPengurus">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pengurus-stat-card">
+
+                        <div class="pengurus-stat-icon">
+                            <i class='bx bx-male'></i>
+                        </div>
+
+                        <div>
+                            <span>Pengurus Laki-laki</span>
+                            <strong id="pengurusLaki">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pengurus-stat-card">
+
+                        <div class="pengurus-stat-icon">
+                            <i class='bx bx-female'></i>
+                        </div>
+
+                        <div>
+                            <span>Pengurus Perempuan</span>
+                            <strong id="pengurusPerempuan">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+                            <span>FORM DATA</span>
+
+                            <h2 id="formTitle">
+                                Tambah Data Pengurus
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <form id="pengurusForm">
+
+                        <input
+                            type="hidden"
+                            id="pengurusId"
+                        >
+
+
+                        <div class="form-grid">
+
+                            <!-- NIP / ID -->
+                            <div class="form-group">
+
+                                <label for="nip">
+                                    NIP / ID
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nip"
+                                    placeholder="Masukkan NIP / ID"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- NAMA -->
+                            <div class="form-group">
+
+                                <label for="nama">
+                                    Nama
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nama"
+                                    placeholder="Masukkan nama"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- JENIS KELAMIN -->
+                            <div class="form-group">
+
+                                <label for="jenisKelamin">
+                                    Jenis Kelamin
+                                </label>
+
+                                <select
+                                    id="jenisKelamin"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Pilih jenis kelamin
+                                    </option>
+
+                                    <option value="Laki-laki">
+                                        Laki-laki
+                                    </option>
+
+                                    <option value="Perempuan">
+                                        Perempuan
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- BAGIAN -->
+                            <div class="form-group">
+
+                                <label for="bagian">
+                                    Bagian
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bagian"
+                                    placeholder="Contoh: Keamanan"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- JABATAN -->
+                            <div class="form-group">
+
+                                <label for="jabatan">
+                                    Jabatan
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="jabatan"
+                                    placeholder="Contoh: Ketua"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                id="btnBatal"
+                                class="btn-batal"
+                            >
+                                <span>Batal</span>
+                            </button>
+
+                            <button
+                                type="submit"
+                                id="btnSimpan"
+                                class="btn-simpan"
+                            >
+                                <i class='bx bx-save'></i>
+                                <span>Simpan Data</span>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- DATA PENGURUS -->
+                <section class="admin-card">
+
+                    <div class="data-header">
+
+                        <div>
+                            <span>DATA TERSIMPAN</span>
+
+                            <h2>Daftar Pengurus</h2>
+                        </div>
+
+
+                        <div class="data-actions">
+
+                            <button
+                                type="button"
+                                id="btnExport"
+                                class="btn-export"
+                            >
+                                <i class='bx bx-download'></i>
+                                <span>Export Data</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                id="btnImport"
+                                class="btn-import"
+                            >
+                                <i class='bx bx-upload'></i>
+                                <span>Import Data</span>
+                            </button>
+
+                            <input
+                                type="file"
+                                id="fileImport"
+                                accept=".csv"
+                                hidden
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SEARCH + FILTER -->
+                    <div class="admin-filters">
+
+                        <div class="admin-search">
+
+                            <i class='bx bx-search'></i>
+
+                            <input
+                                type="text"
+                                id="searchPengurus"
+                                placeholder="Cari nama atau NIP..."
+                            >
+
+                        </div>
+
+
+                        <select id="filterBagian">
+
+                            <option value="">
+                                Semua Bagian
+                            </option>
+
+                        </select>
+
+
+                        <select id="filterJabatan">
+
+                            <option value="">
+                                Semua Jabatan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TABLE -->
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>No</th>
+                                    <th>NIP / ID</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Bagian</th>
+                                    <th>Jabatan</th>
+                                    <th>Aksi</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="pengurusTableBody">
+                                <!-- Data akan dibuat JavaScript -->
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- EMPTY DATA -->
+                    <div
+                        id="emptyData"
+                        class="empty-data"
+                    >
+
+                        <i class='bx bx-user-x'></i>
+
+                        <h3>
+                            Belum ada data pengurus
+                        </h3>
+
+                        <p>
+                            Silakan tambahkan data pengurus melalui form di atas.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/data_pengurus/pengurus.js"></script>
+
+</body>
+
+</html>

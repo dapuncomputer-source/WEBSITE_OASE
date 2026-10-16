@@ -1,7 +1,19 @@
+
+/* =================================
+   CEK LOGIN ADMIN
+================================= */
+
+const adminLogin = localStorage.getItem("adminLogin");
+
+if (adminLogin !== "true") {
+    window.location.href = "login.html";
+}
+
+
+
 /* =================================
    DATA SANTRI
 ================================= */
-
 const dataSantri =
     JSON.parse(localStorage.getItem("dataSantri")) || [];
 
@@ -36,3 +48,24 @@ document.getElementById("santriPutra").textContent =
 
 document.getElementById("santriPutri").textContent =
     santriPutri;
+
+
+
+
+/* =================================
+   LOGOUT ADMIN
+================================= */
+
+const btnLogout = document.getElementById("btnLogout");
+
+btnLogout.addEventListener("click", function() {
+
+    const yakin = confirm("Apakah kamu yakin ingin logout?");
+
+    if (!yakin) return;
+
+    localStorage.removeItem("adminLogin");
+
+    window.location.href = "../index.html";
+
+});

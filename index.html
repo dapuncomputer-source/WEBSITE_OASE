@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
     <meta name="description"
-          content="Website resmi Pesantren OASE AL QURAN. Informasi Profil, kegiatan, Data santri, Dan pendaftaran">
+        content="Website resmi Pesantren Oase Al Quran yang menyajikan informasi profil pondok, program pendidikan, kegiatan, data santri, dan pendaftaran.">
     <title>Beranda - Pondok Pesantren Oase Al-Quran</title>
+
+    <!-- Browser color -->
+    <meta name="theme-color" content="#0B4F8A">
 
     <!-- icon tab -->
     <link rel="icon" type="image/png" href="assets/images/logo/logo_tab.png">
+
+    <!-- Open Graph: pratinjau saat link dibagikan -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"content="Pondok Pesantren Oase Al-Quran">
+    <meta property="og:description"content="Kenali profil pondok, program pendidikan, kegiatan, dan informasi pendaftaran Pesantren Oase Al Quran.">
+    <!-- <meta property="og:image"
+        content="assets/images/logo/logo_tab.png"> -->
+    <meta property="og:url" content="https://www.oasealquran.ponpes.id/">
+
 
     <!-- Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -43,10 +57,10 @@
                 <div class="media">
                     <div class="social_media">
                         <ul>
-                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/"><i class='bx bxl-instagram'></i></a></li>
-                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/"><i class='bx bxl-facebook'></i></a></li>
-                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran"><i class='bx bxl-youtube'></i></a></li>
-                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran"><i class='bx bxl-tiktok'></i></a></li>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class='bx bxl-tiktok'></i></a></li>
                         </ul>
                     </div>
                     
@@ -90,8 +104,8 @@
                         <li class="dropdown-berita">
                             <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
                             <ul class="nav_berita">
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Kegiatan</a></li>
+                                <li><a href="berita/index.html">Berita</a></li>
+                                <li><a href="kegiatan/index.html">Kegiatan</a></li>
                                 <li><a href="#">Pengunguman</a></li>
                                 <li><a href="#">Dokumentasi</a></li>
                             </ul>
@@ -117,185 +131,35 @@
     <!-- =============[ LANDING PAGE ]============== -->
     <!-- =========================================== -->
     <main>
+        
         <!-- BERITA TERKINI -->
         <section class="berita_section">
             <div class="berita_container">
+            
                 <!-- HEADER BERITA -->
                 <div class="berita_header">
-                    <h2>berita Terkini</h2>
+                    <h2>Berita Terkini</h2>
                     <a href="berita/index.html">Lihat Semua Berita</a>
                 </div>
-
-                <!-- BERITA UTAMA -->
-                <div class="berita_utama">
-
-                    <!-- BERITA 1 -->
-                    <article class="berita_card berita_card_besar">
-                        <a href="berita/detail.html">
-                            <img 
-                                src="" 
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    kegiatan
-                                </span>
-                                <h3>
-                                    Kegiatan Terbaru Pondok
-                                </h3>
-                                <p>
-                                    18 September 2026
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- BERITA 2 -->
-                    <article class="berita_card berita_card_besar">
-                        <a href="berita/detail.html">
-                            <img 
-                                src="" 
-                                alt="Kegiatan Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Santri
-                                </span>
-                                <h3>
-                                    Kegiatan Santri Pesantren
-                                </h3>
-                                <p>
-                                    17 September 2026
-                                </p>
-                            </div>
-                        </a>
-                    </article>
+            
+                <!-- DUA BERITA TERBARU -->
+                <div class="berita_utama" id="beritaUtama">
+                    <!-- Diisi otomatis oleh JavaScript -->
                 </div>
-
-
-                <!-- BERITA KECIL -->
-                <div class="berita_list">
-
-                    <!-- BERITA 3 -->
-                    <article class="berita_card berita_card_kecil">
-                        <a href="berita/detail.html">
-                            <img 
-                                src=""
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Informasi
-                                </span>
-
-                                <h3>
-                                    Informasi Pesantren
-                                </h3>
-
-                                <p>
-                                    12 January 2026
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- BERITA 4 -->
-                    <article class="berita_card berita_card_kecil">
-                        <a href="berita/detail.html">
-                            <img 
-                                src="" 
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Kegiatan
-                                </span>
-
-                                <h3>
-                                    kegiatan Santri
-                                </h3>
-                                <p>
-                                    16 Juni 2026
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- BERITA 5 -->
-                    <article class="berita_card berita_card_kecil">
-                        <a href="berita/detail.html">
-                            <img 
-                                src="" 
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Pengumuman
-                                </span>
-
-                                <h3>
-                                    Pengunguman Pesantren
-                                </h3>
-                                <p>
-                                    17 Agustus
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- BERITA 6 -->
-                    <article class="berita_card berita_card_kecil">
-                        <a href="berita/detail.html">
-                            <img
-                                src=""
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Santri
-                                </span>
-
-                                <h3>
-                                    Prestasi Santri
-                                </h3>
-                                <p>
-                                    3 September
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- BERITA 7 -->
-                    <article class="berita_card berita_card_kecil">
-                        <a href="berita/detail.html">
-                            <img
-                                src=""
-                                alt="Berita Pesantren"
-                            >
-
-                            <div class="berita_overlay">
-                                <span class="berita_kategori">
-                                    Kegiatan
-                                </span>
-
-                                <h3>
-                                    Agenda Kegiatan Pondok
-                                </h3>
-                                <p>
-                                    2 Maret 2025
-                                </p>
-                            </div>
-                        </a>
-                    </article>
+            
+                <!-- BERITA BERIKUTNYA -->
+                <div class="berita_list" id="beritaList">
+                    <!-- Diisi otomatis oleh JavaScript -->
                 </div>
+            
+                <!-- PESAN JIKA BELUM ADA BERITA -->
+                <p id="pesanBeritaKosong" hidden>
+                    Belum ada berita terbaru dari Pesantren Oase.
+                </p>
+            
             </div>
         </section>
+
     </main>
 
 
@@ -499,19 +363,19 @@
                 <!-- SOCIAL MEDIA -->
                 <div class="footer_social">
 
-                    <a href="#" aria-label="Instagram">
+                    <a href="https://www.instagram.com/pesantren.oase.alquran/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-instagram'></i>
                     </a>
 
-                    <a href="#" aria-label="Facebook">
+                    <a href="https://www.facebook.com/ppq.oasequranibdg/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-facebook'></i>
                     </a>
 
-                    <a href="#" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@pesantren.oase.alquran" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-youtube'></i>
                     </a>
 
-                    <a href="#" aria-label="TikTok">
+                    <a href="https://www.tiktok.com/@pesantren.oase.alquran" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-tiktok'></i>
                     </a>
 
@@ -554,10 +418,10 @@
 
                 <h3>Navigasi</h3>
 
-                <a href="#">Beranda</a>
-                <a href="#">Informasi</a>
-                <a href="#">Data Santri</a>
-                <a href="#">Berita</a>
+                <a href="index.html">Beranda</a>
+                <a href="informasi/index.html">Informasi</a>
+                <a href="data-santri/index.html">Data Santri</a>
+                <a href="berita/index.html">Berita</a>
                 <a href="#">Pendaftaran</a>
                 <a href="#">Kontak</a>
 
@@ -574,6 +438,11 @@
                 © 2026 Pesantren Oase Al-Qur'an Bandung
             </p>
 
+            <a href="../admin/login.html" class="footer-admin-login">
+                <i class='bx bx-lock-alt'></i>
+                <span>Login Admin</span>
+            </a>
+
         </div>
 
     </footer>
@@ -582,5 +451,6 @@
 
 <!-- Menyanbung ke JS -->
 <script src="assets/js/script.js"></script>
+<script src="assets/js/berita/berita_landing.js"></script>
 </body>
 </html>

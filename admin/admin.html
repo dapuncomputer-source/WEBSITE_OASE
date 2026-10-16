@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Admin | Oase</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/admin.css">
+
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    
+
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-logo">
+                <strong>Oase Admin</strong>
+                <span>Panel Administrasi</span>
+            </div>
+
+            <nav class="admin-nav">
+
+                <a href="admin.html" class="active">
+                    <i class='bx bx-home'></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../santri/admin.html">
+                    <i class='bx bx-group'></i>
+                    <span>Data Santri</span>
+                </a>
+
+                <a href="../pengajar/admin.html">
+                    <i class='bx bx-user'></i>
+                    <span>Pengajar</span>
+                </a>
+
+                <a href="../pengurus/admin.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span>Pengurus</span>
+                </a>
+
+                <a href="../berita/admin.html">
+                    <i class='bx bx-news'></i>
+                    <span>Berita</span>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-images'></i>
+                    <span>Galeri</span>
+                </a>
+
+            </nav>
+
+            <button type="button" id="btnLogout" class="admin-logout">
+                <i class='bx bx-log-out'></i>
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- KONTEN -->
+        <div class="admin-content">
+
+            <main class="admin-dashboard">
+
+                <!-- HEADER -->
+                <section class="dashboard-header">
+                
+                    <div>
+                        <span class="dashboard-label">
+                            ADMIN OASE
+                        </span>
+                    
+                        <h1>
+                            Dashboard Admin
+                        </h1>
+                    
+                        <p>
+                            Kelola data dan informasi Pondok Oase.
+                        </p>
+                    </div>
+                
+                </section>
+            
+            
+                <!-- STATISTIK -->
+                <section class="dashboard-statistik">
+                
+                    <!-- Total Santri -->
+                    <div class="dashboard-stat-card">
+                    
+                        <div class="dashboard-stat-icon">
+                            <i class='bx bx-group'></i>
+                        </div>
+                    
+                        <div>
+                            <span>Total Santri</span>
+                            <strong id="totalSantri">0</strong>
+                        </div>
+                    
+                    </div>
+                
+                    <!-- Total Santri Putra -->
+                    <div class="dashboard-stat-card">
+                    
+                        <div class="dashboard-stat-icon">
+                            <i class='bx bx-male'></i>
+                        </div>
+                    
+                        <div>
+                            <span>Santri Putra</span>
+                            <strong id="santriPutra">0</strong>
+                        </div>
+                    
+                    </div>
+                
+                    <!-- Total Santri Putri -->
+                    <div class="dashboard-stat-card">
+                    
+                        <div class="dashboard-stat-icon">
+                            <i class='bx bx-female'></i>
+                        </div>
+                    
+                        <div>
+                            <span>Santri Putri</span>
+                            <strong id="santriPutri">0</strong>
+                        </div>
+                    
+                    </div>
+                
+                </section>
+            
+            
+                <!-- KELOLA DATA -->
+                <section class="dashboard-menu">
+                
+                    <div class="dashboard-section-title">
+                    
+                        <div>
+                            <span>DATA</span>
+                            <h2>Kelola Data</h2>
+                        </div>
+                    
+                    </div>
+                
+                
+                    <div class="dashboard-menu-grid">
+                    
+                        <!-- Data Santri -->
+                        <a href="../santri/admin.html" class="dashboard-menu-card">
+                        
+                            <i class='bx bx-group'></i>
+                        
+                            <div>
+                                <h3>Data Santri</h3>
+                                <p>
+                                    Tambah, edit, hapus dan kelola data santri.
+                                </p>
+                            </div>
+                        
+                            <i class='bx bx-chevron-right'></i>
+                        
+                        </a>
+                    
+                        <!-- Data Pengajar -->
+                        <a href="#" class="dashboard-menu-card">
+                        
+                            <i class='bx bx-user'></i>
+                        
+                            <div>
+                                <h3>Data Pengajar</h3>
+                                <p>
+                                    Kelola data pengajar pondok.
+                                </p>
+                            </div>
+                        
+                            <i class='bx bx-chevron-right'></i>
+                        
+                        </a>
+                    
+                        <!-- Data Pengurus -->
+                        <a href="#" class="dashboard-menu-card">
+                        
+                            <i class='bx bx-user-pin'></i>
+                        
+                            <div>
+                                <h3>Data Pengurus</h3>
+                                <p>
+                                    Kelola data pengurus pondok.
+                                </p>
+                            </div>
+                        
+                            <i class='bx bx-chevron-right'></i>
+                        
+                        </a>
+                    
+                        <!-- BERITA -->
+                        <a href="#" class="dashboard-menu-card">
+                        
+                            <i class='bx bx-news'></i>
+                        
+                            <div>
+                                <h3>Kelola Berita</h3>
+                                <p>
+                                    Tambah dan kelola berita pondok.
+                                </p>
+                            </div>
+                        
+                            <i class='bx bx-chevron-right'></i>
+                        
+                        </a>
+                    
+                    
+                        <!-- GALERI -->
+                        <a href="#" class="dashboard-menu-card">
+                        
+                            <i class='bx bx-images'></i>
+                        
+                            <div>
+                                <h3>Kelola Galeri</h3>
+                                <p>
+                                    Kelola dokumentasi dan foto kegiatan.
+                                </p>
+                            </div>
+                        
+                            <i class='bx bx-chevron-right'></i>
+                        
+                        </a>
+                    
+                    </div>
+                
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../assets/js/admin/admin.js"></script>
+    <script src="../assets/js/admin/navbar_data.js"></script>
+
+</body>
+
+</html>
