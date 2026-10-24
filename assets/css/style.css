@@ -604,6 +604,7 @@ body {
 .berita_section {
     width: 100%;
     padding: 30px 0;
+    background: #fefdfd; 
 }
 
 .berita_container {
@@ -611,7 +612,6 @@ body {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
-    border: 1px solid #000;
 }
 
 /* HEADER */
@@ -620,6 +620,7 @@ body {
     align-items: center;
     margin-bottom: 25px;
     min-height: 40px;
+    border-bottom: 2px solid var(--gelap);
 }
 
 .berita_header h2 {
@@ -1035,7 +1036,6 @@ body {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
-    border: 1px solid #000;
 }
 
 
@@ -1201,7 +1201,7 @@ body {
 .video_section {
     width: 100%;
     padding: 60px 0;
-    background-color: #fff;
+    background: #EDF3F8;
 }
 
 
@@ -1212,7 +1212,6 @@ body {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
-    border: 1px solid #000;
 }
 
 
@@ -1501,7 +1500,6 @@ body {
     width: 100%;
     background-color: var(--biru-tua);
     color: var(--putih);
-    margin-top: 60px;
 }
 
 

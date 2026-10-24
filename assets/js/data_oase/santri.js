@@ -1,111 +1,81 @@
+
 /* =================================
    DATA SANTRI PUBLIC
 ================================= */
 
-
-/* =================================
-   AMBIL DATA
-================================= */
-
+// Ambil data dari Local Storage
 const dataSantri = JSON.parse(
     localStorage.getItem("dataSantri")
 ) || [];
 
+// Elemen statistik
+const totalSantriEl = document.getElementById("totalSantri");
+const santriPutraEl = document.getElementById("santriPutra");
+const santriPutriEl = document.getElementById("santriPutri");
+const angkatanList = document.getElementById("angkatanList");
 
-/* =================================
-   HITUNG TOTAL
-================================= */
-
+// Hitung statistik
 const totalSantri = dataSantri.length;
-
-
-/* =================================
-   HITUNG PUTRA
-================================= */
 
 const santriPutra = dataSantri.filter(
     santri => santri.jenisKelamin === "Laki-laki"
 ).length;
 
-
-/* =================================
-   HITUNG PUTRI
-================================= */
-
 const santriPutri = dataSantri.filter(
     santri => santri.jenisKelamin === "Perempuan"
 ).length;
 
+// Tampilkan hanya jika elemennya tersedia
+if (totalSantriEl) {
+    totalSantriEl.textContent = totalSantri;
+}
 
-/* =================================
-   TAMPILKAN STATISTIK
-================================= */
+if (santriPutraEl) {
+    santriPutraEl.textContent = santriPutra;
+}
 
-document.getElementById("totalSantri").textContent =
-    totalSantri;
+if (santriPutriEl) {
+    santriPutriEl.textContent = santriPutri;
+}
 
-document.getElementById("santriPutra").textContent =
-    santriPutra;
+// Tampilkan data angkatan jika elemennya tersedia
+if (angkatanList) {
+    angkatanList.replaceChildren();
 
-document.getElementById("santriPutri").textContent =
-    santriPutri;
-
-
-/* =================================
-   TAMPILKAN ANGKATAN OTOMATIS
-================================= */
-
-const angkatanList = document.getElementById("angkatanList");
-
-
-/* Ambil semua tahun angkatan */
-
-const daftarAngkatan = [
-    ...new Set(
-        dataSantri.map(
-            santri => santri.angkatan
+    const daftarAngkatan = [
+        ...new Set(
+            dataSantri.map(santri => santri.angkatan)
         )
-    )
-];
+    ];
 
+    daftarAngkatan.sort(
+        (a, b) => Number(a) - Number(b)
+    );
 
-/* Urutkan dari tahun terkecil */
+    daftarAngkatan.forEach(tahun => {
+        const jumlah = dataSantri.filter(
+            santri => santri.angkatan === tahun
+        ).length;
 
-daftarAngkatan.sort(
-    (a, b) => Number(a) - Number(b)
-);
+        const card = document.createElement("div");
+        card.className = "angkatan-card";
 
+        const icon = document.createElement("i");
+        icon.className = "bx bx-calendar";
 
-/* Tampilkan */
+        const info = document.createElement("div");
 
-daftarAngkatan.forEach(tahun => {
+        const label = document.createElement("span");
+        label.textContent = "Angkatan";
 
-    const jumlah = dataSantri.filter(
-        santri => santri.angkatan === tahun
-    ).length;
+        const heading = document.createElement("h3");
+        heading.textContent = tahun;
 
+        const jumlahEl = document.createElement("strong");
+        jumlahEl.textContent = `${jumlah} Santri`;
 
-    const card = document.createElement("div");
-
-    card.className = "angkatan-card";
-
-
-    card.innerHTML = `
-
-        <i class='bx bx-calendar'></i>
-
-        <div>
-            <span>Angkatan</span>
-            <h3>${tahun}</h3>
-        </div>
-
-        <strong>
-            ${jumlah} Santri
-        </strong>
-
-    `;
-
-
-    angkatanList.appendChild(card);
-
-});
+        info.append(label, heading);
+        card.append(icon, info, jumlahEl);
+        angkatanList.appendChild(card);
+    });
+}

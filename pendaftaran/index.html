@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Informasi pendaftaran santri baru Pondok Pesantren Oase Al-Qur'an.">
+
+    <meta name="theme-color" content="#0B0B0B">
+
+    <title>PSB - Pondok Pesantren Oase Al-Qur'an</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet">
+
+    <!-- CSS utama dan CSS halaman -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pendaftaran/pendaftaran.css">
+</head>
+
+
+<body>
+    <!-- =========================================== -->
+    <!-- =============== [ NAVBAR ] ================ -->
+    <!-- =========================================== -->
+    <nav class="oase-navbar">
+        <div>
+            <!-- LOGO DESKOP & LAPTOP -->
+            <div class="logo-oase">
+                <img
+                    class="logo_deskop"
+                    src="../assets/images/logo/logo.png"
+                    alt="Logo Pesantren Deskop"
+                >
+
+                <!-- LOGO TABLET -->
+                <img
+                    class="logo_mobile"
+                    src="../assets/images/logo/logo_mobile.png"
+                    alt="Logo Pesantren Mobile"
+                >
+            </div>
+            <!-- NAVIGASI -->
+            <div class="navigasi">
+                <div class="media">
+                    <div class="social_media">
+                        <ul>
+                            <li><a class="media_icon" href="https://www.instagram.com/pesantren.oase.alquran/"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a class="media_icon" href="https://www.facebook.com/ppq.oasequranibdg/"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a class="media_icon" href="https://www.youtube.com/@pesantren.oase.alquran"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a class="media_icon" href="https://www.tiktok.com/@pesantren.oase.alquran"><i class='bx bxl-tiktok'></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEARCH -->
+                    <div class="search">
+                        <button type="button" class="search_icon" id="searchOpen">
+                            <i class='bx bx-search'></i>
+                        </button>
+
+                        <div class="search_box" id="searchBox">
+                            <input 
+                                type="text"
+                                id="searchInput"
+                                placeholder="Cari informasi..."
+                                autocomplete="off"
+                            >
+
+                            <button type="button" id="searchClear" class="search_clear">
+                                <i class='bx bx-x'></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar_nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li class="dropdown-info">
+                            <a href="#" id="infoTogle">Informasi <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_info">
+                                <li><a href="../informasi/index.html">Tentang Pondok</a></li>
+                                <li><a href="../informasi/tentang/sambutan.html">Sambutan Pimpinan</a></li>
+                                <li><a href="../informasi/tentang/sejarah.html">Sejarah</a></li>
+                                <li><a href="../informasi/tentang/visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="../informasi/program pondok/program.html">Program Pondok</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="../santri/index.html">Data Santri</a></li>
+                        <li class="dropdown-berita">
+                            <a href="#" id="beritaTogle">Berita <i class='bx bx-chevron-down'></i></a>
+                            <ul class="nav_berita">
+                                <li><a href="../berita/index.html">Berita</a></li>
+                                <li><a href="../kegiatan/index.html">Kegiatan</a></li>
+                                <li><a href="#">Pengunguman</a></li>
+                                <li><a href="#">Dokumentasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="../kontak/index.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="registration-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <span class="eyebrow hero-eyebrow">
+                    INFORMASI PENERIMAAN
+                </span>
+
+                <h1>
+                    Pendaftaran<br>
+                    Santri Baru
+                </h1>
+
+                <p>
+                    Pondok Pesantren Oase Al-Qur'an menjadi tempat
+                    untuk menuntut ilmu, membangun akhlak mulia,
+                    dan mendekatkan diri kepada Al-Qur'an.
+                </p>
+
+                <div class="hero-line"></div>
+
+            </div>
+        </section>
+
+
+        <!-- INFORMASI PENERIMAAN -->
+        <section class="section container">
+
+            <div class="section-heading">
+                <span class="eyebrow">INFORMASI PENERIMAAN</span>
+
+                <h2>Informasi Penerimaan Santri Baru</h2>
+
+                <p>
+                    Informasi penerimaan akan diperbarui setelah
+                    memperoleh konfirmasi resmi dari pihak pesantren.
+                    Silakan pantau informasi resmi Pondok Pesantren
+                    Oase Al-Qur'an.
+                </p>
+            </div>
+
+            <div class="information-grid">
+
+                <article class="information-item">
+                    <span class="information-number">01</span>
+
+                    <div>
+                        <h3>Status Penerimaan</h3>
+                        <p>Menunggu konfirmasi pihak pesantren.</p>
+                    </div>
+                </article>
+
+                <article class="information-item">
+                    <span class="information-number">02</span>
+
+                    <div>
+                        <h3>Jenjang Pendidikan</h3>
+                        <p>Akan diinformasikan setelah dikonfirmasi.</p>
+                    </div>
+                </article>
+
+                <article class="information-item">
+                    <span class="information-number">03</span>
+
+                    <div>
+                        <h3>Periode Pendaftaran</h3>
+                        <p>Menunggu informasi jadwal resmi.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSYARATAN -->
+        <section class="section section-light">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">PERSYARATAN</span>
+
+                    <h2>Persyaratan Pendaftaran</h2>
+
+                    <p>
+                        Ketentuan dan dokumen pendaftaran akan
+                        ditampilkan setelah dikonfirmasi oleh
+                        pihak pesantren.
+                    </p>
+                </div>
+
+                <div class="notice-panel">
+                    <div class="notice-mark">i</div>
+
+                    <div>
+                        <h3>Informasi Persyaratan</h3>
+
+                        <p>
+                            Persyaratan resmi sedang menunggu
+                            konfirmasi. Mohon periksa kembali halaman
+                            ini untuk mendapatkan informasi terbaru.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALUR PENDAFTARAN -->
+        <section class="section container">
+
+            <div class="section-heading">
+                <span class="eyebrow">PROSEDUR</span>
+
+                <h2>Alur Pendaftaran Santri Baru</h2>
+
+                <p>
+                    Tahapan berikut merupakan gambaran umum proses
+                    penerimaan, bukan prosedur resmi Oase. Pelaksanaan
+                    sebenarnya akan mengikuti ketentuan pesantren.
+                </p>
+            </div>
+
+            <div class="process-list">
+
+                <article class="process-item">
+                    <div class="process-number">01</div>
+
+                    <div class="process-content">
+                        <h3>Mencari Informasi</h3>
+
+                        <p>
+                            Calon santri dan wali memperoleh informasi
+                            penerimaan melalui kanal resmi pesantren.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-item">
+                    <div class="process-number">02</div>
+
+                    <div class="process-content">
+                        <h3>Melakukan Pendaftaran</h3>
+
+                        <p>
+                            Metode dan tata cara pendaftaran akan
+                            dijelaskan setelah mendapat konfirmasi resmi.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-item">
+                    <div class="process-number">03</div>
+
+                    <div class="process-content">
+                        <h3>Verifikasi Persyaratan</h3>
+
+                        <p>
+                            Ketentuan pemeriksaan berkas akan mengikuti
+                            prosedur yang ditetapkan pihak pesantren.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-item">
+                    <div class="process-number">04</div>
+
+                    <div class="process-content">
+                        <h3>Informasi Hasil</h3>
+
+                        <p>
+                            Informasi hasil dan tahapan berikutnya
+                            akan disampaikan melalui kanal resmi
+                            yang ditetapkan pesantren.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- KONTAK PENDAFTARAN -->
+        <section class="contact-section">
+
+            <div class="container contact-content">
+
+                <div>
+                    <span class="eyebrow contact-eyebrow">
+                        INFORMASI LEBIH LANJUT
+                    </span>
+
+                    <h2>Informasi Pendaftaran</h2>
+
+                    <p>
+                        Untuk mengetahui informasi penerimaan santri
+                        baru, silakan pantau kanal resmi Pondok
+                        Pesantren Oase Al-Qur'an.
+                    </p>
+                </div>
+
+                <a href="https://www.instagram.com/pesantren.oase.alquran/"
+                   class="contact-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Kunjungi Instagram Resmi
+
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="section container">
+
+            <div class="section-heading">
+                <span class="eyebrow">FAQ</span>
+
+                <h2>Pertanyaan Umum</h2>
+
+                <p>
+                    Jawaban akan diperbarui setelah informasi resmi
+                    penerimaan tersedia.
+                </p>
+            </div>
+
+            <div class="faq-list">
+
+                <details class="faq-item">
+                    <summary>
+                        Kapan pendaftaran santri baru dibuka?
+                        <span class="faq-symbol">+</span>
+                    </summary>
+
+                    <p>
+                        Jadwal pembukaan pendaftaran masih menunggu
+                        konfirmasi dari pihak pesantren.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        Apa saja persyaratan pendaftaran?
+                        <span class="faq-symbol">+</span>
+                    </summary>
+
+                    <p>
+                        Persyaratan resmi akan ditampilkan setelah
+                        informasi diperoleh dari pihak pesantren.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        Bagaimana cara mendaftar?
+                        <span class="faq-symbol">+</span>
+                    </summary>
+
+                    <p>
+                        Metode pendaftaran belum dikonfirmasi.
+                        Informasi akan diperbarui setelah prosedur
+                        resminya tersedia.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        Apakah terdapat biaya pendaftaran?
+                        <span class="faq-symbol">+</span>
+                    </summary>
+
+                    <p>
+                        Informasi biaya belum tersedia dan perlu
+                        dikonfirmasi kepada pihak pesantren.
+                    </p>
+                </details>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <!-- =========================================== -->
+    <!-- ================= FOOTER ================== -->
+    <!-- =========================================== -->
+    <footer class="oase-footer">
+
+        <div class="footer_container">
+
+            <!-- BAGIAN KIRI -->
+            <div class="footer_brand">
+
+                <img 
+                    src="../assets/images/logo/Footer.png" 
+                    alt="Pesantren Oase Al-Qur'an Bandung"
+                >
+
+                <p>
+                    Pesantren Oase Al-Qur'an Bandung
+                </p>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer_social">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAGIAN TENGAH -->
+            <div class="footer_contact">
+
+                <h3>Hubungi Kami</h3>
+
+                <a href="#">
+                    <i class='bx bx-map'></i>
+                    <span>
+                        Alamat Pesantren Oase Al-Qur'an Bandung
+                    </span>
+                </a>
+
+                <a href="mailto:email@pesantren-oase.sch.id">
+                    <i class='bx bx-envelope'></i>
+                    <span>
+                        email@pesantren-oase.sch.id
+                    </span>
+                </a>
+
+                <a href="tel:08000000000">
+                    <i class='bx bx-phone'></i>
+                    <span>
+                        08xxxxxxxxxx
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- BAGIAN KANAN -->
+            <div class="footer_navigation">
+
+                <h3>Navigasi</h3>
+
+                <a href="#">Beranda</a>
+                <a href="#">Informasi</a>
+                <a href="#">Data Santri</a>
+                <a href="#">Berita</a>
+                <a href="#">Pendaftaran</a>
+                <a href="#">Kontak</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer_bottom">
+
+            <p>
+                © 2026 Pesantren Oase Al-Qur'an Bandung
+            </p>
+
+            <a href="../admin/login.html" class="footer-admin-login">
+                <i class='bx bx-lock-alt'></i>
+                <span>Login Admin</span>
+            </a>
+
+        </div>
+
+    </footer>
+
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

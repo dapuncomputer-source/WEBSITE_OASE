@@ -1,0 +1,824 @@
+
+/* ========================================
+   PENDAFTARAN OASE
+   Tema: Hitam, Biru, dan Putih
+======================================== */
+
+:root {
+    --daftar-biru: #0B4F8A;
+    --daftar-biru-tua: #063B6B;
+    --daftar-hitam: #0B0B0B;
+    --daftar-gelap: #1F2937;
+    --daftar-putih: #FFFFFF;
+    --daftar-biru-muda: #EAF4FF;
+    --daftar-abu: #F3F4F6;
+    --daftar-border: #E2E8F0;
+    --daftar-teks: #475569;
+}
+
+/* RESET KHUSUS HALAMAN */
+
+body {
+    margin: 0;
+    color: var(--daftar-gelap);
+    background: var(--daftar-putih);
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+}
+
+body,
+body * {
+    box-sizing: border-box;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1280px, calc(100% - 40px));
+    padding: 0 var(--container-padding);
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: 76px;
+}
+
+.section-light {
+    padding-block: 76px;
+    background: #F7F9FC;
+    border-top: 1px solid #EDF1F5;
+    border-bottom: 1px solid #EDF1F5;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.nav-container {
+    width: min(1200px, calc(100% - 40px));
+    min-height: 76px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--daftar-hitam);
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.brand span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.brand small {
+    color: #64748B;
+    font-size: 11px;
+}
+
+.brand strong {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--daftar-biru-tua);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-menu a {
+    position: relative;
+    padding-block: 27px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--daftar-biru);
+}
+
+.nav-menu a.active {
+    font-weight: 700;
+}
+
+.nav-menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    height: 2px;
+    background: var(--daftar-biru);
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--daftar-border);
+    border-radius: 5px;
+    background: #FFFFFF;
+    color: var(--daftar-hitam);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.registration-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 11, 11, 0.96) 0%,
+            rgba(6, 59, 107, 0.88) 43%,
+            rgba(6, 59, 107, 0.12) 100%
+        ),
+        url("../images/pendaftaran/hero-oase.jpg")
+        center 48% / cover no-repeat;
+    background-color: var(--daftar-biru-tua);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        rgba(11, 11, 11, 0.15),
+        transparent 50%
+    );
+}
+
+.hero-content {
+    padding-block: 65px;
+    color: #FFFFFF;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--daftar-biru);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.hero-eyebrow {
+    color: #BFDBFE;
+}
+
+.registration-hero h1 {
+    max-width: 580px;
+    margin: 15px 0 16px;
+    color: #FFFFFF;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -1px;
+}
+
+.registration-hero p {
+    max-width: 510px;
+    margin: 0;
+    color: #E5E7EB;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-line {
+    width: 48px;
+    height: 3px;
+    margin-top: 24px;
+    background: #60A5FA;
+}
+
+/* JUDUL BAGIAN */
+
+.section-heading {
+    max-width: 790px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    margin: 9px 0 12px;
+    color: var(--daftar-hitam);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--daftar-teks);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* INFORMASI PENERIMAAN */
+
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background: var(--daftar-biru-muda);
+    border: 1px solid #D8E9F8;
+    border-radius: 6px;
+    padding: 28px 10px;
+}
+
+.information-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 8px 24px;
+}
+
+.information-item + .information-item {
+    border-left: 1px solid #C5D9EC;
+}
+
+.information-number {
+    color: var(--daftar-biru);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.information-item h3 {
+    margin: 0 0 6px;
+    color: var(--daftar-hitam);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.information-item p {
+    margin: 0;
+    color: var(--daftar-teks);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* PANEL INFORMASI */
+
+.notice-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 26px 28px;
+    background: #FFFFFF;
+    border: 1px solid var(--daftar-border);
+    border-left: 4px solid var(--daftar-biru);
+    border-radius: 5px;
+}
+
+.notice-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: 1px solid #BFDBFE;
+    border-radius: 50%;
+    color: var(--daftar-biru);
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.notice-panel h3 {
+    margin: 0 0 6px;
+    color: var(--daftar-hitam);
+    font-size: 14px;
+}
+
+.notice-panel p {
+    margin: 0;
+    color: var(--daftar-teks);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* ALUR PENDAFTARAN */
+
+.process-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--daftar-border);
+    border-bottom: 1px solid var(--daftar-border);
+}
+
+.process-item {
+    padding: 28px 22px 30px;
+}
+
+.process-item:first-child {
+    padding-left: 0;
+}
+
+.process-item:last-child {
+    padding-right: 0;
+}
+
+.process-item + .process-item {
+    border-left: 1px solid var(--daftar-border);
+}
+
+.process-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: var(--daftar-hitam);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.process-content h3 {
+    margin: 0 0 10px;
+    color: var(--daftar-biru-tua);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.process-content p {
+    margin: 0;
+    color: var(--daftar-teks);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* KONTAK */
+
+.contact-section {
+    margin-block: 0 76px;
+    padding-block: 44px;
+    background: var(--daftar-hitam);
+    color: #FFFFFF;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-content > div {
+    max-width: 670px;
+}
+
+.contact-eyebrow {
+    color: #93C5FD;
+}
+
+.contact-content h2 {
+    margin: 9px 0 12px;
+    color: #FFFFFF;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.3;
+}
+
+.contact-content p {
+    max-width: 620px;
+    margin: 0;
+    color: #D1D5DB;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-shrink: 0;
+    padding: 13px 20px;
+    border: 1px solid #93C5FD;
+    border-radius: 4px;
+    background: var(--daftar-biru);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.contact-button:hover {
+    background: var(--daftar-biru-tua);
+}
+
+.contact-button i {
+    font-size: 19px;
+}
+
+/* FAQ */
+
+.faq-list {
+    border-top: 1px solid var(--daftar-border);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--daftar-border);
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 4px;
+    color: var(--daftar-hitam);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-symbol {
+    color: var(--daftar-biru);
+    font-size: 22px;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-symbol {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    max-width: 850px;
+    margin: 0;
+    padding: 0 30px 20px 4px;
+    color: var(--daftar-teks);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: var(--daftar-hitam);
+    color: #D1D5DB;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 55px;
+    padding-block: 48px;
+}
+
+.footer-logo {
+    color: #FFFFFF;
+}
+
+.footer-logo img {
+    filter: grayscale(1) brightness(0) invert(1);
+}
+
+.footer-logo strong {
+    color: #FFFFFF;
+}
+
+.footer-logo small {
+    color: #CBD5E1;
+}
+
+.footer-brand p {
+    max-width: 260px;
+    margin: 20px 0 0;
+    color: #9CA3AF;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    margin: 0 0 9px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-column a {
+    color: #CBD5E1;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover,
+.footer-bottom a:hover {
+    color: #93C5FD;
+}
+
+.footer-bottom {
+    border-top: 1px solid #30343B;
+    background: #080808;
+}
+
+.footer-bottom-content {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    margin: 0;
+    color: #9CA3AF;
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    color: #FFFFFF;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+    .nav-container {
+        gap: 18px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+        padding: 12px 20px;
+    }
+
+    .information-item {
+        padding: 20px 5px;
+    }
+
+    .information-item + .information-item {
+        border-left: none;
+        border-top: 1px solid #C5D9EC;
+    }
+
+    .process-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-item {
+        padding: 25px 20px;
+    }
+
+    .process-item:first-child,
+    .process-item:last-child {
+        padding-inline: 20px;
+    }
+
+    .process-item:nth-child(odd) {
+        border-left: none;
+    }
+
+    .process-item:nth-child(n + 3) {
+        border-top: 1px solid var(--daftar-border);
+    }
+
+    .footer-main {
+        gap: 30px;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 650px) {
+    .container,
+    .nav-container {
+        width: calc(100% - 32px);
+    }
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .brand img {
+        width: 39px;
+        height: 39px;
+    }
+
+    .brand strong {
+        font-size: 13px;
+    }
+
+    .brand small {
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 16px 14px;
+        border-bottom: 1px solid var(--daftar-border);
+        background: #FFFFFF;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 4px;
+        border-bottom: 1px solid #F1F5F9;
+        font-size: 13px;
+    }
+
+    .nav-menu a.active::after {
+        display: none;
+    }
+
+    .registration-hero {
+        min-height: 340px;
+        background-position: 62% center;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(11, 11, 11, 0.96),
+                rgba(6, 59, 107, 0.78)
+            ),
+            url("../images/pendaftaran/hero-oase.jpg");
+    }
+
+    .hero-content {
+        padding-block: 55px;
+    }
+
+    .registration-hero h1 {
+        font-size: 40px;
+    }
+
+    .registration-hero p {
+        max-width: 440px;
+        font-size: 13px;
+    }
+
+    .section,
+    .section-light {
+        padding-block: 52px;
+    }
+
+    .section-heading {
+        margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .notice-panel {
+        gap: 14px;
+        padding: 20px 16px;
+    }
+
+    .process-list {
+        grid-template-columns: 1fr;
+    }
+
+    .process-item,
+    .process-item:first-child,
+    .process-item:last-child {
+        display: flex;
+        gap: 17px;
+        padding: 23px 0;
+        border-left: none;
+    }
+
+    .process-item + .process-item {
+        border-top: 1px solid var(--daftar-border);
+    }
+
+    .process-number {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .process-content h3 {
+        margin-bottom: 6px;
+    }
+
+    .contact-section {
+        margin-bottom: 52px;
+        padding-block: 34px;
+    }
+
+    .contact-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+
+    .faq-item summary {
+        font-size: 13px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 24px;
+        padding-block: 36px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom-content {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding-block: 16px;
+    }
+}
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
