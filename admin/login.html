@@ -20,64 +20,178 @@
 
     <main class="login-page">
 
-        <div class="login-card">
+        <!-- Hiasan latar -->
+        <div class="login-background">
+            <div class="bg-orbit orbit-one"></div>
+            <div class="bg-orbit orbit-two"></div>
+            <div class="bg-glow glow-one"></div>
+            <div class="bg-glow glow-two"></div>
+            <div class="geometric-pattern"></div>
+            <div class="floating-light light-one"></div>
+            <div class="floating-light light-two"></div>
+            <div class="floating-light light-three"></div>
+        </div>
 
-            <div class="login-header">
-                <i class='bx bx-shield-quarter'></i>
 
-                <span>ADMIN OASE</span>
+        <!-- Header -->
+        <header class="login-topbar">
 
-                <h1>Login Admin</h1>
+            <a href="../index.html" class="login-brand">
+                <span class="brand-symbol">
+                    <i class='bx bx-book-open'></i>
+                </span>
 
-                <p>Masuk untuk mengelola website Oase.</p>
+                <span class="brand-text">
+                    <small>PONDOK PESANTREN</small>
+                    <strong>Oase Al-Qur'an</strong>
+                </span>
+            </a>
+
+            <a href="../index.html" class="back-home">
+                <i class='bx bx-arrow-back'></i>
+                <span>Kembali ke Beranda</span>
+            </a>
+
+        </header>
+
+
+        <!-- Kartu Login -->
+        <section class="login-card">
+
+            <!-- Bagian Sambutan -->
+            <div class="login-welcome">
+
+                <div class="welcome-decoration decoration-one"></div>
+                <div class="welcome-decoration decoration-two"></div>
+
+                <div class="welcome-content">
+
+                    <span class="welcome-label">
+                        PONDOK PESANTREN OASE AL-QUR'AN
+                    </span>
+
+                    <div class="welcome-divider">
+                        <span></span>
+                        <i class='bx bx-star'></i>
+                        <span></span>
+                    </div>
+
+                    <h1>
+                        Selamat Datang<br>
+                        <span>di Oase Al-Qur'an</span>
+                    </h1>
+
+                    <p>
+                        Menuntut ilmu, membangun akhlak mulia,
+                        dan mendekatkan diri kepada Al-Qur'an.
+                    </p>
+
+                    <div class="welcome-bottom">
+                        <span class="welcome-line"></span>
+
+                        <div>
+                            <small>RUANG PENGELOLAAN WEBSITE</small>
+                            <strong>Administrator Oase</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="welcome-watermark">
+                    <i class='bx bx-book-open'></i>
+                </div>
+
             </div>
 
 
-            <form id="loginForm">
+            <!-- Bagian Form Login -->
+            <div class="login-form-section">
 
-                <div class="login-field">
-                    <label for="username">Username</label>
+                <div class="form-decoration"></div>
 
-                    <div class="login-input">
-                        <i class='bx bx-user'></i>
+                <div class="login-header">
 
-                        <input
-                            type="text"
-                            id="username"
-                            placeholder="Masukkan username"
-                            required
-                        >
+                    <div class="admin-icon">
+                        <i class='bx bx-shield-quarter'></i>
                     </div>
+
+                    <span class="form-label">AKSES PENGELOLA</span>
+
+                    <h2>Login Admin</h2>
+
+                    <p>
+                        Silakan masuk menggunakan akun administrator
+                        untuk mengelola website Oase.
+                    </p>
+
                 </div>
 
 
-                <div class="login-field">
-                    <label for="password">Password</label>
+                <form id="loginForm">
 
-                    <div class="login-input">
-                        <i class='bx bx-lock-alt'></i>
+                    <div class="login-field">
 
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Masukkan password"
-                            required
-                        >
+                        <label for="username">Username</label>
+
+                        <div class="login-input">
+                            <i class='bx bx-user'></i>
+
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="Masukkan username"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+
                     </div>
+
+
+                    <div class="login-field">
+
+                        <label for="password">Password</label>
+
+                        <div class="login-input">
+                            <i class='bx bx-lock-alt'></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Masukkan password"
+                                autocomplete="current-password"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <p id="loginError" class="login-error"></p>
+
+
+                    <button type="submit" class="btn-login">
+
+                        <span>Masuk ke Dashboard</span>
+
+                        <i class='bx bx-log-in'></i>
+
+                    </button>
+
+                </form>
+
+
+                <div class="login-security">
+                    <i class='bx bx-shield-quarter'></i>
+
+                    <span>
+                        Area khusus administrator
+                    </span>
                 </div>
 
+            </div>
 
-                <p id="loginError" class="login-error"></p>
-
-
-                <button type="submit" class="btn-login">
-                    <i class='bx bx-log-in'></i>
-                    <span>Masuk</span>
-                </button>
-
-            </form>
-
-        </div>
+        </section>
 
     </main>
 
